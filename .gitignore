@@ -179,4 +179,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### MISC ###
+supervisord.log
+supervisord.pid
+
 # End of https://www.toptal.com/developers/gitignore/api/phpstorm,laravel,windows,osx,macos,dotenv
