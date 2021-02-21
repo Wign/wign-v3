@@ -14,8 +14,8 @@ class TagDescription extends Migration
     public function up()
     {
         Schema::create('tag_description', function (Blueprint $table) {
-            $table->foreignId('tag_id')->constrained();
-            $table->foreignId('description_id')->constrained();
+            $table->foreignId('tag_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('description_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->primary(['tag_id','description_id']);
         });
     }

@@ -14,8 +14,8 @@ class CreateRequestsTable extends Migration
     public function up()
     {
         Schema::create('requests', function (Blueprint $table) {
-            $table->foreignId('word_id')->constrained();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('word_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
             $table->primary(['word_id', 'user_id']);
         });

@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class TranslationSeeder extends Seeder
+class ViewsSeeder extends Seeder
 {
     /**
      * Run the database seeds.

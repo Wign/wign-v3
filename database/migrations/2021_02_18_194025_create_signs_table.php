@@ -20,8 +20,9 @@ class CreateSignsTable extends Migration
             $table->string('thumbnail_url');
             $table->string('small_thumbnail_url');
             $table->integer('playings')->unsigned()->default(0);
-            $table->foreignId('language_id')->constrained();
-            $table->foreignId('creator_id')->constrained('users');
+            $table->foreignId('sign_language_id')->constrained('languages')->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('word_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('creator_id')->nullable()->comment("Creator can be nullable, but only in certain situations, where the creator have grant permission to let the signs keep here")->constrained('users')->cascadeOnUpdate()->restrictOnDelete();
             $table->timestamps();
             $table->softDeletes();
         });

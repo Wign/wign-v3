@@ -16,11 +16,8 @@ class CreateDescriptionsTable extends Migration
         Schema::create('descriptions', function (Blueprint $table) {
             $table->id();
             $table->text('text');
-            $table->integer('descriptionable_id');
-            $table->string('descriptionable_type');
-            $table->foreignId('creator_id')->constrained('users');
+            $table->foreignId('sign_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

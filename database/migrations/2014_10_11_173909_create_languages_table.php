@@ -18,6 +18,7 @@ class CreateLanguagesTable extends Migration
             $table->string('code')->unique();
             $table->string('text')->nullable();
             $table->enum('type', ['TEXT', 'SIGN'])->index();
+            $table->softDeletes();
         });
     }
 

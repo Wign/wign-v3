@@ -15,7 +15,7 @@ class CreateArtTable extends Migration
     {
         Schema::create('art', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('artist_id')->constrained()->onDelete('cascade');
+            $table->foreignId('artist_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('title')->nullable();
             $table->year('year')->nullable();
             $table->date('publish')->nullable()->comment("Ferniseringsdato (ikke oprettelsesdato på Wign)");

@@ -24,11 +24,9 @@ class CreateUsersTable extends Migration
             $table->timestamp('last_login')->useCurrent();
             $table->string('password');
             $table->boolean('public')->default(0);
-            $table->foreignId('sign_language')->nullable()->comment("The default sign language")->constrained('languages');
-            $table->foreignId('text_language')->nullable()->comment("The default text language")->constrained('languages');
+            $table->foreignId('sign_language')->nullable()->comment("The default sign language")->constrained('languages')->cascadeOnUpdate()->nullOnDelete();
+            $table->foreignId('text_language')->nullable()->comment("The default text language")->constrained('languages')->cascadeOnUpdate()->nullOnDelete();
             $table->rememberToken();
-            $table->foreignId('current_team_id')->nullable();
-            $table->text('profile_photo_path')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

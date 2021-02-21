@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Translation;
+use App\Models\Views;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TranslationFactory extends Factory
+class ViewsFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Translation::class;
+    protected $model = Views::class;
 
     /**
      * Define the model's default state.
