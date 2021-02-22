@@ -24,8 +24,8 @@ class CreateUsersTable extends Migration
             $table->timestamp('last_login')->useCurrent();
             $table->string('password');
             $table->boolean('public')->default(0);
-            $table->foreignId('sign_language')->nullable()->comment("The default sign language")->constrained('languages')->cascadeOnUpdate()->nullOnDelete();
-            $table->foreignId('text_language')->nullable()->comment("The default text language")->constrained('languages')->cascadeOnUpdate()->nullOnDelete();
+            $table->foreignId('sign_language_id')->nullable()->comment("The default sign language")->constrained('languages')->cascadeOnUpdate()->nullOnDelete();
+            $table->foreignId('text_language_id')->nullable()->comment("The default text language")->constrained('languages')->cascadeOnUpdate()->nullOnDelete();
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
