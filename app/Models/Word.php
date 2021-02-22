@@ -19,8 +19,23 @@ class Word extends Model
 {
     use HasFactory;
 
-    public function descriptions()
+    public function language()
     {
-        return $this->morphMany(Description::class, 'descriptionable');
+        return $this->belongsTo(Language::class);
+    }
+
+    public function description()
+    {
+        return $this->hasOne(Description::class);
+    }
+
+    public function creator()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function editor()
+    {
+        return $this->belongsTo(User::class);
     }
 }

@@ -16,4 +16,8 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     use HasFactory;
+
+    public function descriptions() {
+        return $this->belongsToMany(Description::class);
+    }
 }

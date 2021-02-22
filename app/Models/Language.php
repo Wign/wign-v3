@@ -16,4 +16,24 @@ use Illuminate\Database\Eloquent\Model;
 class Language extends Model
 {
     use HasFactory;
+
+    public function signs()
+    {
+        return $this->hasMany(Sign::class);
+    }
+
+    public function words()
+    {
+        return $this->hasMany(Word::class);
+    }
+
+    public function defaultTextLanguages()
+    {
+        return $this->hasMany(User::class);
+    }
+
+    public function defaultSignLanguages()
+    {
+        return $this->hasMany(User::class);
+    }
 }

@@ -16,4 +16,9 @@ use Illuminate\Database\Eloquent\Model;
 class Art extends Model
 {
     use HasFactory;
+
+    public function artist()
+    {
+        return $this->hasOne(Art::class);
+    }
 }

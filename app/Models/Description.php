@@ -18,11 +18,13 @@ class Description extends Model
 {
     use HasFactory;
 
-    /**
-     * Get the parent commentable model (post or video).
-     */
-    public function descriptionable()
+    public function sign()
     {
-        return $this->morphTo();
+        return $this->belongsTo(Sign::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
     }
 }
