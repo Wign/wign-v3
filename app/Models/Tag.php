@@ -29,6 +29,6 @@ class Tag extends Model
 
     public function descriptions()
     {
-        return $this->belongsToMany(Description::class);
+        return $this->belongsToMany(Description::class)->as('descriptions');
     }
 }

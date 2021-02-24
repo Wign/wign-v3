@@ -21,7 +21,7 @@ class CreateArtTable extends Migration
             $table->date('publish')->nullable()->comment("Ferniseringsdato (ikke oprettelsesdato på Wign)");
             $table->boolean('visible')->default(1);
             $table->string('filename')->unique();
-            $table->bigInteger('views')->unsigned()->default(TRUE);
+            $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
         });
     }

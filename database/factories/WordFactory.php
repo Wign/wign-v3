@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\Word;
+use App\Providers\FakerProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class WordFactory extends Factory
@@ -21,8 +23,11 @@ class WordFactory extends Factory
      */
     public function definition()
     {
+        $this->faker->addProvider(new FakerProvider($this->faker));
+
         return [
-            //
+            'literal' => $this->faker->unique()->wignLiterals,
+            'language_id' => 1,
         ];
     }
 }

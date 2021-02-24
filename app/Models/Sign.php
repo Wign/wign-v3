@@ -58,7 +58,11 @@ class Sign extends Model
         return $this->belongsTo(Language::class, 'sign_language_id');
     }
 
-    public function descriptions()
+    public function word() {
+        return $this->belongsTo(Word::class);
+    }
+
+    public function description()
     {
         return $this->hasOne(Description::class);
     }

@@ -40,6 +40,14 @@ class Language extends Model
     use HasFactory;
     use SoftDeletes;
 
+    /**
+     * No timestamp to Language model
+     * ATTENTION! It still have softdelete attribute!
+     * @var bool
+     */
+    public $timestamps = false;
+
+
     public function signs()
     {
         return $this->hasMany(Sign::class);

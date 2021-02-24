@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Description;
+use App\Models\Sign;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class DescriptionFactory extends Factory
@@ -22,7 +23,9 @@ class DescriptionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            //'text'     => $faker->textWithHashtag(), Later...
+            'text' => $this->faker->realText(),
+            'sign_id' => Sign::factory()
         ];
     }
 }
