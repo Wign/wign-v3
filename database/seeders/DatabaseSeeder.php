@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             TranslationSeeder::class,
             LikeSeeder::class,
-            //RequestSeeder::class,
-            //ViewsSeeder::class,
+            RequestSeeder::class,
+            ViewsSeeder::class,
             //ArtistSeeder::class
         ]);
     }

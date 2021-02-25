@@ -28,6 +28,10 @@ class WordFactory extends Factory
         return [
             'literal' => $this->faker->unique()->wignLiterals,
             'language_id' => 1,
+            'creator_id' => User::factory(),
+            'editor_id' => function (array $attributes) {
+                return $attributes['creator_id'];
+            }
         ];
     }
 }
