@@ -26,7 +26,7 @@ class CreateNewUser implements CreatesNewUsers
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
             'postnr' => ['nullable', 'numeric', 'min:1000', 'max:9990'],
-            'dob' => ['nullable', 'numeric', 'min:'.Carbon::now()->subYears(100)->year, 'max:'.Carbon::now()->year],
+            'dob' => ['nullable', 'numeric', 'min:1900', 'max:'.Carbon::now()->year],
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
 
@@ -35,7 +35,7 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
             'postnr' => $input['postnr'],
-            'dob' => $input['dob'],
+            'dob' => $input['dob']
         ]);
     }
 }
