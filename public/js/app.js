@@ -3611,7 +3611,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['value']
+  props: ['value', 'required']
 });
 
 /***/ }),
@@ -4920,6 +4920,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -4944,6 +4954,8 @@ __webpack_require__.r(__webpack_exports__);
         email: '',
         password: '',
         password_confirmation: '',
+        postnr: '',
+        dob: '',
         terms: false
       })
     };
@@ -29432,7 +29444,10 @@ var render = function() {
     { staticClass: "block font-medium text-sm text-gray-700" },
     [
       _vm.value
-        ? _c("span", [_vm._v(_vm._s(_vm.value))])
+        ? _c("span", [
+            _vm._v(_vm._s(_vm.value) + " "),
+            _vm.required ? _c("span", [_vm._v("*")]) : _vm._e()
+          ])
         : _c("span", [_vm._t("default")], 2)
     ]
   )
@@ -32071,7 +32086,9 @@ var render = function() {
           _c(
             "div",
             [
-              _c("jet-label", { attrs: { for: "name", value: "Name" } }),
+              _c("jet-label", {
+                attrs: { for: "name", value: "Navn", required: true }
+              }),
               _vm._v(" "),
               _c("jet-input", {
                 staticClass: "mt-1 block w-full",
@@ -32098,7 +32115,9 @@ var render = function() {
             "div",
             { staticClass: "mt-4" },
             [
-              _c("jet-label", { attrs: { for: "email", value: "Email" } }),
+              _c("jet-label", {
+                attrs: { for: "email", value: "E-mail", required: true }
+              }),
               _vm._v(" "),
               _c("jet-input", {
                 staticClass: "mt-1 block w-full",
@@ -32120,7 +32139,7 @@ var render = function() {
             { staticClass: "mt-4" },
             [
               _c("jet-label", {
-                attrs: { for: "password", value: "Password" }
+                attrs: { for: "password", value: "Kodeord", required: true }
               }),
               _vm._v(" "),
               _c("jet-input", {
@@ -32150,7 +32169,8 @@ var render = function() {
               _c("jet-label", {
                 attrs: {
                   for: "password_confirmation",
-                  value: "Confirm Password"
+                  value: "Bekræft kodeord",
+                  required: true
                 }
               }),
               _vm._v(" "),
@@ -32168,6 +32188,52 @@ var render = function() {
                     _vm.$set(_vm.form, "password_confirmation", $$v)
                   },
                   expression: "form.password_confirmation"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "mt-4" },
+            [
+              _c("jet-label", {
+                attrs: { for: "postnr", value: "Postnummer" }
+              }),
+              _vm._v(" "),
+              _c("jet-input", {
+                staticClass: "mt-1 block w-full",
+                attrs: { id: "postnr", type: "text" },
+                model: {
+                  value: _vm.form.postnr,
+                  callback: function($$v) {
+                    _vm.$set(_vm.form, "postnr", $$v)
+                  },
+                  expression: "form.postnr"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "mt-4" },
+            [
+              _c("jet-label", {
+                attrs: { for: "dob", value: "Fødselsår (F.eks. 1994)" }
+              }),
+              _vm._v(" "),
+              _c("jet-input", {
+                staticClass: "mt-1 block w-full",
+                attrs: { id: "dob", type: "text", pattern: "\\d{4}" },
+                model: {
+                  value: _vm.form.dob,
+                  callback: function($$v) {
+                    _vm.$set(_vm.form, "dob", $$v)
+                  },
+                  expression: "form.dob"
                 }
               })
             ],
@@ -32196,7 +32262,9 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("div", { staticClass: "ml-2" }, [
-                          _vm._v("\n                        I agree to the "),
+                          _vm._v(
+                            "\n                        Jeg er indforstået med "
+                          ),
                           _c(
                             "a",
                             {
@@ -32209,7 +32277,7 @@ var render = function() {
                             },
                             [_vm._v("Terms of Service")]
                           ),
-                          _vm._v(" and "),
+                          _vm._v(" og "),
                           _c(
                             "a",
                             {
@@ -32243,7 +32311,7 @@ var render = function() {
                     "underline text-sm text-gray-600 hover:text-gray-900",
                   attrs: { href: _vm.route("login") }
                 },
-                [_vm._v("\n                Already registered?\n            ")]
+                [_vm._v("\n                Allerede registeret?\n            ")]
               ),
               _vm._v(" "),
               _c(
