@@ -1,7 +1,7 @@
 <template>
     <jet-form-section @submitted="updateProfileInformation">
         <template #title>
-            Profile Information
+            Profil information
         </template>
 
         <template #description>
@@ -53,6 +53,20 @@
                 <jet-label for="email" value="Email" />
                 <jet-input id="email" type="email" class="mt-1 block w-full" v-model="form.email" />
                 <jet-input-error :message="form.errors.email" class="mt-2" />
+            </div>
+
+            <!-- Postnummer -->
+            <div class="col-span-6 sm:col-span-4">
+                <jet-label for="postnr" value="Postnummer" />
+                <jet-input id="postnr" pattern="[1-9][0-9]{3}" type="text" class="mt-1 block w-full" v-model="form.postnr" />
+                <jet-input-error :message="form.errors.postnr" class="mt-2" />
+            </div>
+
+            <!-- Email -->
+            <div class="col-span-6 sm:col-span-4">
+                <jet-label for="dob" value="Fødselsår (F.eks. 1994)" />
+                <jet-input id="dob" type="text" pattern="[0-9]{4}" class="mt-1 block w-full" v-model="form.dob" />
+                <jet-input-error :message="form.errors.dob" class="mt-2" />
             </div>
         </template>
 

@@ -29,12 +29,12 @@
 
             <div class="mt-4">
                 <jet-label for="postnr" value="Postnummer" />
-                <jet-input id="postnr" type="text" class="mt-1 block w-full" v-model="form.postnr" />
+                <jet-input id="postnr" type="text" pattern="[1-9][0-9]{3}" class="mt-1 block w-full" v-model="form.postnr" />
             </div>
 
             <div class="mt-4">
                 <jet-label for="dob" value="Fødselsår (F.eks. 1994)" />
-                <jet-input id="dob" type="text" pattern="\d{4}" class="mt-1 block w-full" v-model="form.dob" />
+                <jet-input id="dob" type="text" pattern="[0-9]{4}" class="mt-1 block w-full" v-model="form.dob" />
             </div>
 
             <div class="mt-4" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">

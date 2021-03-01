@@ -6090,6 +6090,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -32204,7 +32218,7 @@ var render = function() {
               _vm._v(" "),
               _c("jet-input", {
                 staticClass: "mt-1 block w-full",
-                attrs: { id: "postnr", type: "text" },
+                attrs: { id: "postnr", type: "text", pattern: "[1-9][0-9]{3}" },
                 model: {
                   value: _vm.form.postnr,
                   callback: function($$v) {
@@ -32227,7 +32241,7 @@ var render = function() {
               _vm._v(" "),
               _c("jet-input", {
                 staticClass: "mt-1 block w-full",
-                attrs: { id: "dob", type: "text", pattern: "\\d{4}" },
+                attrs: { id: "dob", type: "text", pattern: "[0-9]{4}" },
                 model: {
                   value: _vm.form.dob,
                   callback: function($$v) {
@@ -34112,6 +34126,66 @@ var render = function() {
                 _c("jet-input-error", {
                   staticClass: "mt-2",
                   attrs: { message: _vm.form.errors.email }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-span-6 sm:col-span-4" },
+              [
+                _c("jet-label", {
+                  attrs: { for: "postnr", value: "Postnummer" }
+                }),
+                _vm._v(" "),
+                _c("jet-input", {
+                  staticClass: "mt-1 block w-full",
+                  attrs: {
+                    id: "postnr",
+                    pattern: "[1-9][0-9]{3}",
+                    type: "text"
+                  },
+                  model: {
+                    value: _vm.form.postnr,
+                    callback: function($$v) {
+                      _vm.$set(_vm.form, "postnr", $$v)
+                    },
+                    expression: "form.postnr"
+                  }
+                }),
+                _vm._v(" "),
+                _c("jet-input-error", {
+                  staticClass: "mt-2",
+                  attrs: { message: _vm.form.errors.pstnr }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-span-6 sm:col-span-4" },
+              [
+                _c("jet-label", {
+                  attrs: { for: "dob", value: "Fødselsår (F.eks. 1994)" }
+                }),
+                _vm._v(" "),
+                _c("jet-input", {
+                  staticClass: "mt-1 block w-full",
+                  attrs: { id: "dob", type: "text", pattern: "[0-9]{4}" },
+                  model: {
+                    value: _vm.form.dob,
+                    callback: function($$v) {
+                      _vm.$set(_vm.form, "dob", $$v)
+                    },
+                    expression: "form.dob"
+                  }
+                }),
+                _vm._v(" "),
+                _c("jet-input-error", {
+                  staticClass: "mt-2",
+                  attrs: { message: _vm.form.errors.dob }
                 })
               ],
               1
