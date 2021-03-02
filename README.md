@@ -14,7 +14,7 @@ Redesigned by André Jensen
 -[X] Database migrations
 -[X] Seeds & Factories
 -[X] Bruger registering + postnr + dob
--[ ] Brugerprofil inkl. feltene
+-[X] Brugerprofil inkl. feltene
 -[ ] Oversætte til dansk i de sider der er "fabrikslavet" fra Jetstream
 -[ ] Localization af resten af Laravel (validationsbeskeder osv)
 -[ ] Generelle sider og templates på plads

@@ -110,6 +110,8 @@
                     _method: 'PUT',
                     name: this.user.name,
                     email: this.user.email,
+                    postnr: this.user.postnr,
+                    dob: this.user.dob,
                     photo: null,
                 }),
 

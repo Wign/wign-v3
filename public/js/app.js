@@ -6128,6 +6128,8 @@ __webpack_require__.r(__webpack_exports__);
         _method: 'PUT',
         name: this.user.name,
         email: this.user.email,
+        postnr: this.user.postnr,
+        dob: this.user.dob,
         photo: null
       }),
       photoPreview: null
@@ -33430,7 +33432,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Profile\n        ")]
+                [_vm._v("\n            Profil\n        ")]
               )
             ]
           },
@@ -33947,7 +33949,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Profile Information\n    ")]
+          return [_vm._v("\n        Profil information\n    ")]
         },
         proxy: true
       },
@@ -34157,7 +34159,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("jet-input-error", {
                   staticClass: "mt-2",
-                  attrs: { message: _vm.form.errors.pstnr }
+                  attrs: { message: _vm.form.errors.postnr }
                 })
               ],
               1
