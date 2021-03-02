@@ -18,12 +18,12 @@
             </div>
 
             <div class="mt-4">
-                <jet-label for="password" value="Kodeord" :required="true" />
+                <jet-label for="password" value="Password" :required="true" />
                 <jet-input id="password" type="password" class="mt-1 block w-full" v-model="form.password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <jet-label for="password_confirmation" value="Bekræft kodeord" :required="true" />
+                <jet-label for="password_confirmation" value="Bekræft password" :required="true" />
                 <jet-input id="password_confirmation" type="password" class="mt-1 block w-full" v-model="form.password_confirmation" required autocomplete="new-password" />
             </div>
 
@@ -35,6 +35,10 @@
             <div class="mt-4">
                 <jet-label for="dob" value="Fødselsår (F.eks. 1994)" />
                 <jet-input id="dob" type="text" pattern="[0-9]{4}" class="mt-1 block w-full" v-model="form.dob" />
+            </div>
+
+            <div class="mt-4">
+                <p class="text-sm text-gray-600">Postnummer og fødselsår bruges udelukkende til statistik formål. De gives ikke videre, og står ikke offentligt. Det er frivilligt om du gerne vil skrive det. Det har ingen indflydelse på din brugeroplevelse hos Wign.</p>
             </div>
 
             <div class="mt-4" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">

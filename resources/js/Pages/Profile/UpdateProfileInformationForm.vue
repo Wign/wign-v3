@@ -1,11 +1,11 @@
 <template>
     <jet-form-section @submitted="updateProfileInformation">
         <template #title>
-            Profil information
+            Profiloplysninger
         </template>
 
         <template #description>
-            Update your account's profile information and email address.
+            Opdater din kontos profiloplysninger og e-mail-adresse.
         </template>
 
         <template #form>
@@ -16,7 +16,7 @@
                             ref="photo"
                             @change="updatePhotoPreview">
 
-                <jet-label for="photo" value="Photo" />
+                <jet-label for="photo" value="Profilbillede" />
 
                 <!-- Current Profile Photo -->
                 <div class="mt-2" v-show="! photoPreview">
@@ -31,11 +31,11 @@
                 </div>
 
                 <jet-secondary-button class="mt-2 mr-2" type="button" @click.native.prevent="selectNewPhoto">
-                    Select A New Photo
+                    Vælg nyt profilbillede
                 </jet-secondary-button>
 
                 <jet-secondary-button type="button" class="mt-2" @click.native.prevent="deletePhoto" v-if="user.profile_photo_path">
-                    Remove Photo
+                    Fjern profilbillede
                 </jet-secondary-button>
 
                 <jet-input-error :message="form.errors.photo" class="mt-2" />
@@ -43,14 +43,14 @@
 
             <!-- Name -->
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="name" value="Name" />
-                <jet-input id="name" type="text" class="mt-1 block w-full" v-model="form.name" autocomplete="name" />
+                <jet-label for="name" value="Navn" />
+                <jet-input id="name" type="text" class="mt-1 block w-full" v-model="form.name" autocomplete="navn" />
                 <jet-input-error :message="form.errors.name" class="mt-2" />
             </div>
 
             <!-- Email -->
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="email" value="Email" />
+                <jet-label for="email" value="E-mail" />
                 <jet-input id="email" type="email" class="mt-1 block w-full" v-model="form.email" />
                 <jet-input-error :message="form.errors.email" class="mt-2" />
             </div>
@@ -68,15 +68,19 @@
                 <jet-input id="dob" type="text" pattern="[0-9]{4}" class="mt-1 block w-full" v-model="form.dob" />
                 <jet-input-error :message="form.errors.dob" class="mt-2" />
             </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <p class="text-sm text-gray-600">Postnummer og fødselsår bruges udelukkende til statistik formål. De gives ikke videre, og står ikke offentligt. Det er frivilligt om du gerne vil skrive det. Det har ingen indflydelse på din brugeroplevelse hos Wign.</p>
+            </div>
         </template>
 
         <template #actions>
             <jet-action-message :on="form.recentlySuccessful" class="mr-3">
-                Saved.
+                Gemt.
             </jet-action-message>
 
             <jet-button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                Save
+                Gem
             </jet-button>
         </template>
     </jet-form-section>

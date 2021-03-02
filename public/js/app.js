@@ -4930,6 +4930,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -6020,6 +6024,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
 /* harmony import */ var _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Jetstream/ActionMessage */ "./resources/js/Jetstream/ActionMessage.vue");
 /* harmony import */ var _Jetstream_SecondaryButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Jetstream/SecondaryButton */ "./resources/js/Jetstream/SecondaryButton.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -31692,7 +31700,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "mb-4 text-sm text-gray-600" }, [
         _vm._v(
-          "\n        This is a secure area of the application. Please confirm your password before continuing.\n    "
+          "\n        Denne side i Wign er sikret. Bekræft venligst din password, inden du fortsætter.\n    "
         )
       ]),
       _vm._v(" "),
@@ -31748,7 +31756,7 @@ var render = function() {
                   class: { "opacity-25": _vm.form.processing },
                   attrs: { disabled: _vm.form.processing }
                 },
-                [_vm._v("\n                Confirm\n            ")]
+                [_vm._v("\n                Bekræft\n            ")]
               )
             ],
             1
@@ -31799,7 +31807,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "mb-4 text-sm text-gray-600" }, [
         _vm._v(
-          "\n        Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.\n    "
+          "\n        Har du glemt din password? Intet problem. Lad os bare have din e-mail-adresse, så sender vi dig et link til nulstilling af password via e-mail, der giver dig mulighed for at vælge en ny password.\n    "
         )
       ]),
       _vm._v(" "),
@@ -31827,7 +31835,7 @@ var render = function() {
           _c(
             "div",
             [
-              _c("jet-label", { attrs: { for: "email", value: "Email" } }),
+              _c("jet-label", { attrs: { for: "email", value: "E-mail" } }),
               _vm._v(" "),
               _c("jet-input", {
                 staticClass: "mt-1 block w-full",
@@ -31859,11 +31867,7 @@ var render = function() {
                   class: { "opacity-25": _vm.form.processing },
                   attrs: { disabled: _vm.form.processing }
                 },
-                [
-                  _vm._v(
-                    "\n                Email Password Reset Link\n            "
-                  )
-                ]
+                [_vm._v("\n                Send mail\n            ")]
               )
             ],
             1
@@ -31936,7 +31940,7 @@ var render = function() {
           _c(
             "div",
             [
-              _c("jet-label", { attrs: { for: "email", value: "Email" } }),
+              _c("jet-label", { attrs: { for: "email", value: "E-mail" } }),
               _vm._v(" "),
               _c("jet-input", {
                 staticClass: "mt-1 block w-full",
@@ -32003,7 +32007,7 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("span", { staticClass: "ml-2 text-sm text-gray-600" }, [
-                  _vm._v("Remember me")
+                  _vm._v("Husk mig")
                 ])
               ],
               1
@@ -32024,7 +32028,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                Forgot your password?\n            "
+                        "\n                Glemt din adgangskode?\n            "
                       )
                     ]
                   )
@@ -32037,7 +32041,7 @@ var render = function() {
                   class: { "opacity-25": _vm.form.processing },
                   attrs: { disabled: _vm.form.processing }
                 },
-                [_vm._v("\n                Login\n            ")]
+                [_vm._v("\n                Log ind\n            ")]
               )
             ],
             1
@@ -32155,7 +32159,7 @@ var render = function() {
             { staticClass: "mt-4" },
             [
               _c("jet-label", {
-                attrs: { for: "password", value: "Kodeord", required: true }
+                attrs: { for: "password", value: "Password", required: true }
               }),
               _vm._v(" "),
               _c("jet-input", {
@@ -32185,7 +32189,7 @@ var render = function() {
               _c("jet-label", {
                 attrs: {
                   for: "password_confirmation",
-                  value: "Bekræft kodeord",
+                  value: "Bekræft password",
                   required: true
                 }
               }),
@@ -32255,6 +32259,14 @@ var render = function() {
             ],
             1
           ),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-4" }, [
+            _c("p", { staticClass: "text-sm text-gray-600" }, [
+              _vm._v(
+                "Postnummer og fødselsår bruges udelukkende til statistik formål. De gives ikke videre, og står ikke offentligt. Det er frivilligt om du gerne vil skrive det. Det har ingen indflydelse på din brugeroplevelse hos Wign."
+              )
+            ])
+          ]),
           _vm._v(" "),
           _vm.$page.props.jetstream.hasTermsAndPrivacyPolicyFeature
             ? _c(
@@ -32402,7 +32414,7 @@ var render = function() {
           _c(
             "div",
             [
-              _c("jet-label", { attrs: { for: "email", value: "Email" } }),
+              _c("jet-label", { attrs: { for: "email", value: "E-mail" } }),
               _vm._v(" "),
               _c("jet-input", {
                 staticClass: "mt-1 block w-full",
@@ -32429,7 +32441,7 @@ var render = function() {
             { staticClass: "mt-4" },
             [
               _c("jet-label", {
-                attrs: { for: "password", value: "Password" }
+                attrs: { for: "password", value: "Ny Password" }
               }),
               _vm._v(" "),
               _c("jet-input", {
@@ -32459,7 +32471,7 @@ var render = function() {
               _c("jet-label", {
                 attrs: {
                   for: "password_confirmation",
-                  value: "Confirm Password"
+                  value: "Bekræft Password"
                 }
               }),
               _vm._v(" "),
@@ -32493,7 +32505,7 @@ var render = function() {
                   class: { "opacity-25": _vm.form.processing },
                   attrs: { disabled: _vm.form.processing }
                 },
-                [_vm._v("\n                Reset Password\n            ")]
+                [_vm._v("\n                Nulstil Password\n            ")]
               )
             ],
             1
@@ -32549,12 +32561,12 @@ var render = function() {
           !_vm.recovery
             ? [
                 _vm._v(
-                  "\n            Please confirm access to your account by entering the authentication code provided by your authenticator application.\n        "
+                  "\n            Bekræft venligst adgang til din konto ved at indtaste den godkendelseskode, der leveres af din to-faktor godkendelsesapp.\n        "
                 )
               ]
             : [
                 _vm._v(
-                  "\n            Please confirm access to your account by entering one of your emergency recovery codes.\n        "
+                  "\n            Bekræft venligst adgang til din konto ved at indtaste en af dine gendannelseskoder.\n        "
                 )
               ]
         ],
@@ -32649,12 +32661,12 @@ var render = function() {
                   !_vm.recovery
                     ? [
                         _vm._v(
-                          "\n                    Use a recovery code\n                "
+                          "\n                    Brug en gendannelseskode\n                "
                         )
                       ]
                     : [
                         _vm._v(
-                          "\n                    Use an authentication code\n                "
+                          "\n                    Brug en godkendelseskode\n                "
                         )
                       ]
                 ],
@@ -32668,7 +32680,7 @@ var render = function() {
                   class: { "opacity-25": _vm.form.processing },
                   attrs: { disabled: _vm.form.processing }
                 },
-                [_vm._v("\n                Login\n            ")]
+                [_vm._v("\n                Log ind\n            ")]
               )
             ],
             1
@@ -32719,7 +32731,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "mb-4 text-sm text-gray-600" }, [
         _vm._v(
-          "\n        Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn't receive the email, we will gladly send you another.\n    "
+          "\n        Tak for tilmeldingen! Inden du kommer i gang, kan du være sød at bekræfte din e-mail adresse ved at klikke på det link, vi lige har sendt dig? Hvis du ikke modtog e-mailen, sender vi dig gerne en anden.\n    "
         )
       ]),
       _vm._v(" "),
@@ -32729,7 +32741,7 @@ var render = function() {
             { staticClass: "mb-4 font-medium text-sm text-green-600" },
             [
               _vm._v(
-                "\n        A new verification link has been sent to the email address you provided during registration.\n    "
+                "\n        Et nyt bekræftelseslink er sendt til den e-mail adresse, du har angivet under registeringen.\n    "
               )
             ]
           )
@@ -32758,7 +32770,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\n                Resend Verification Email\n            "
+                    "\n                Gensend e-mail med bekræftelseslink\n            "
                   )
                 ]
               ),
@@ -32774,7 +32786,7 @@ var render = function() {
                     as: "button"
                   }
                 },
-                [_vm._v("Logout")]
+                [_vm._v("Log ud")]
               )
             ],
             1
@@ -32913,14 +32925,14 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Delete Account\n    ")]
+          return [_vm._v("\n        Slet brugerkonto\n    ")]
         },
         proxy: true
       },
       {
         key: "description",
         fn: function() {
-          return [_vm._v("\n        Permanently delete your account.\n    ")]
+          return [_vm._v("\n        Slet din konto permanent.\n    ")]
         },
         proxy: true
       },
@@ -32930,7 +32942,7 @@ var render = function() {
           return [
             _c("div", { staticClass: "max-w-xl text-sm text-gray-600" }, [
               _vm._v(
-                "\n            Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.\n        "
+                "\n            Så snart din konto er slettet, slettes alt ressourcer og data permanent. Inden du sletter din konto, skal du sørge for at downloade de data du gerne vil beholde.\n        "
               )
             ]),
             _vm._v(" "),
@@ -32947,7 +32959,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Delete Account\n            ")]
+                  [_vm._v("\n                Slet Brugerkonto\n            ")]
                 )
               ],
               1
@@ -32961,7 +32973,7 @@ var render = function() {
                   key: "title",
                   fn: function() {
                     return [
-                      _vm._v("\n                Delete Account\n            ")
+                      _vm._v("\n                Slet Brugerkonto\n            ")
                     ]
                   },
                   proxy: true
@@ -32971,7 +32983,7 @@ var render = function() {
                   fn: function() {
                     return [
                       _vm._v(
-                        "\n                Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.\n\n                "
+                        "\n                Er du sikker på, at du gerne vil slette din konto? Når din konto er slettet, slettes alt ressourcer og data permanent. Indtast venligst din password for at bekræfte, at du gerne vil slette din konto permanent.\n\n                "
                       ),
                       _c(
                         "div",
@@ -33036,7 +33048,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Nevermind\n                "
+                            "\n                    Glem det\n                "
                           )
                         ]
                       ),
@@ -33055,7 +33067,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Delete Account\n                "
+                            "\n                    Slet min konto\n                "
                           )
                         ]
                       )
@@ -33100,7 +33112,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Browser Sessions\n    ")]
+          return [_vm._v("\n        Browsersessioner\n    ")]
         },
         proxy: true
       },
@@ -33109,7 +33121,7 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Manage and logout your active sessions on other browsers and devices.\n    "
+              "\n        Administrer dine aktivt sessioner på andre browsere og enheder.\n    "
             )
           ]
         },
@@ -33121,7 +33133,7 @@ var render = function() {
           return [
             _c("div", { staticClass: "max-w-xl text-sm text-gray-600" }, [
               _vm._v(
-                "\n            If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.\n        "
+                "\n            Hvis det er nødvendigt, kan du logge af alle dine andre browsersessioner på tværs af alle dine enheder. Nogle af dine seneste sessioner er angivet nedenfor; denne liste er muligvis ikke udtømmende. Hvis du føler, at din konto er kompromitteret, bør du også opdatere din adgangskode.\n        "
               )
             ]),
             _vm._v(" "),
@@ -33223,11 +33235,11 @@ var render = function() {
                                         staticClass:
                                           "text-green-500 font-semibold"
                                       },
-                                      [_vm._v("This device")]
+                                      [_vm._v("Denne enhed")]
                                     )
                                   : _c("span", [
                                       _vm._v(
-                                        "Last active " +
+                                        "Senest aktiv " +
                                           _vm._s(session.last_active)
                                       )
                                     ])
@@ -33257,7 +33269,7 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                Logout Other Browser Sessions\n            "
+                      "\n                Log af de andre browsersessioner\n            "
                     )
                   ]
                 ),
@@ -33268,7 +33280,7 @@ var render = function() {
                     staticClass: "ml-3",
                     attrs: { on: _vm.form.recentlySuccessful }
                   },
-                  [_vm._v("\n                Done.\n            ")]
+                  [_vm._v("\n                Færdig.\n            ")]
                 )
               ],
               1
@@ -33283,7 +33295,7 @@ var render = function() {
                   fn: function() {
                     return [
                       _vm._v(
-                        "\n                Logout Other Browser Sessions\n            "
+                        "\n                Log af de andre browsersessioner\n            "
                       )
                     ]
                   },
@@ -33294,7 +33306,7 @@ var render = function() {
                   fn: function() {
                     return [
                       _vm._v(
-                        "\n                Please enter your password to confirm you would like to logout of your other browser sessions across all of your devices.\n\n                "
+                        "\n                Indtast din password for at bekræfte, at du gerne vil logge af dine andre browsersessioner på tværs af alle dine enheder.\n\n                "
                       ),
                       _c(
                         "div",
@@ -33359,7 +33371,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Nevermind\n                "
+                            "\n                    Glem det\n                "
                           )
                         ]
                       ),
@@ -33378,7 +33390,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Logout Other Browser Sessions\n                "
+                            "\n                    Log af de andre browsersessioner\n                "
                           )
                         ]
                       )
@@ -33432,7 +33444,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Profil\n        ")]
+                [_vm._v("\n            Brugerprofil\n        ")]
               )
             ]
           },
@@ -33536,7 +33548,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Two Factor Authentication\n    ")]
+          return [_vm._v("\n        To-faktor Godkendelse\n    ")]
         },
         proxy: true
       },
@@ -33545,7 +33557,7 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Add additional security to your account using two factor authentication.\n    "
+              "\n        Tilføj et ekstra lag af sikkerhed til din brugerkonto ved at bruge to-faktor godkendelse.\n    "
             )
           ]
         },
@@ -33558,19 +33570,19 @@ var render = function() {
             _vm.twoFactorEnabled
               ? _c("h3", { staticClass: "text-lg font-medium text-gray-900" }, [
                   _vm._v(
-                    "\n            You have enabled two factor authentication.\n        "
+                    "\n            Du har aktiveret to-faktor godkendelse.\n        "
                   )
                 ])
               : _c("h3", { staticClass: "text-lg font-medium text-gray-900" }, [
                   _vm._v(
-                    "\n            You have not enabled two factor authentication.\n        "
+                    "\n            Du har ikke slået to-faktor godkendelse til.\n        "
                   )
                 ]),
             _vm._v(" "),
             _c("div", { staticClass: "mt-3 max-w-xl text-sm text-gray-600" }, [
               _c("p", [
                 _vm._v(
-                  "\n                When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.\n            "
+                  '\n                Når to-faktor godkendelse er aktiveret, bliver du bedt om et sikkert, tilfældigt token (tal) under godkendelse. Du kan vælge at hente dette token fra din telefons "Google Authenticator" app.\n            '
                 )
               ])
             ]),
@@ -33587,7 +33599,7 @@ var render = function() {
                           [
                             _c("p", { staticClass: "font-semibold" }, [
                               _vm._v(
-                                "\n                        Two factor authentication is now enabled. Scan the following QR code using your phone's authenticator application.\n                    "
+                                "\n                        To-faktor godkendelse er nu aktiveret. Scan denne QR-kode ved hjælp af din telefons to-faktor godkendelse app.\n                    "
                               )
                             ])
                           ]
@@ -33610,7 +33622,7 @@ var render = function() {
                           [
                             _c("p", { staticClass: "font-semibold" }, [
                               _vm._v(
-                                "\n                        Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost.\n                    "
+                                "\n                        Gem disse gendannelseskoder i et sikker sted. De kan bruges til at gendanne adgang til din konto, hvis din to-faktor godkendelse er forsvundet.\n                    "
                               )
                             ])
                           ]
@@ -33657,7 +33669,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                        Enable\n                    "
+                                "\n                        Slå til\n                    "
                               )
                             ]
                           )
@@ -33680,7 +33692,7 @@ var render = function() {
                                 { staticClass: "mr-3" },
                                 [
                                   _vm._v(
-                                    "\n                        Regenerate Recovery Codes\n                    "
+                                    "\n                        Få nye gendannelseskoder\n                    "
                                   )
                                 ]
                               )
@@ -33699,7 +33711,7 @@ var render = function() {
                                 { staticClass: "mr-3" },
                                 [
                                   _vm._v(
-                                    "\n                        Show Recovery Codes\n                    "
+                                    "\n                        Vis gendannelseskoderne\n                    "
                                   )
                                 ]
                               )
@@ -33722,7 +33734,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                        Disable\n                    "
+                                "\n                        Slå fra\n                    "
                               )
                             ]
                           )
@@ -33769,7 +33781,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Update Password\n    ")]
+          return [_vm._v("\n        Ændre password\n    ")]
         },
         proxy: true
       },
@@ -33778,7 +33790,7 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Ensure your account is using a long, random password to stay secure.\n    "
+              "\n        Sørg for, at din konto bruger en lang, tilfældig password for at være sikker.\n    "
             )
           ]
         },
@@ -33793,7 +33805,10 @@ var render = function() {
               { staticClass: "col-span-6 sm:col-span-4" },
               [
                 _c("jet-label", {
-                  attrs: { for: "current_password", value: "Current Password" }
+                  attrs: {
+                    for: "current_password",
+                    value: "Nuværende Password"
+                  }
                 }),
                 _vm._v(" "),
                 _c("jet-input", {
@@ -33826,7 +33841,7 @@ var render = function() {
               { staticClass: "col-span-6 sm:col-span-4" },
               [
                 _c("jet-label", {
-                  attrs: { for: "password", value: "New Password" }
+                  attrs: { for: "password", value: "Ny Password" }
                 }),
                 _vm._v(" "),
                 _c("jet-input", {
@@ -33861,7 +33876,7 @@ var render = function() {
                 _c("jet-label", {
                   attrs: {
                     for: "password_confirmation",
-                    value: "Confirm Password"
+                    value: "Bekræft Ny Password"
                   }
                 }),
                 _vm._v(" "),
@@ -33902,7 +33917,7 @@ var render = function() {
                 staticClass: "mr-3",
                 attrs: { on: _vm.form.recentlySuccessful }
               },
-              [_vm._v("\n            Saved.\n        ")]
+              [_vm._v("\n            Gemt.\n        ")]
             ),
             _vm._v(" "),
             _c(
@@ -33911,7 +33926,7 @@ var render = function() {
                 class: { "opacity-25": _vm.form.processing },
                 attrs: { disabled: _vm.form.processing }
               },
-              [_vm._v("\n            Save\n        ")]
+              [_vm._v("\n            Gem\n        ")]
             )
           ]
         },
@@ -33949,7 +33964,7 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Profil information\n    ")]
+          return [_vm._v("\n        Profiloplysninger\n    ")]
         },
         proxy: true
       },
@@ -33958,7 +33973,7 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Update your account's profile information and email address.\n    "
+              "\n        Opdater din kontos profiloplysninger og e-mail-adresse.\n    "
             )
           ]
         },
@@ -33981,7 +33996,7 @@ var render = function() {
                     }),
                     _vm._v(" "),
                     _c("jet-label", {
-                      attrs: { for: "photo", value: "Photo" }
+                      attrs: { for: "photo", value: "Profilbillede" }
                     }),
                     _vm._v(" "),
                     _c(
@@ -34046,7 +34061,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                Select A New Photo\n            "
+                          "\n                Vælg nyt profilbillede\n            "
                         )
                       ]
                     ),
@@ -34066,7 +34081,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                Remove Photo\n            "
+                              "\n                Fjern profilbillede\n            "
                             )
                           ]
                         )
@@ -34085,11 +34100,11 @@ var render = function() {
               "div",
               { staticClass: "col-span-6 sm:col-span-4" },
               [
-                _c("jet-label", { attrs: { for: "name", value: "Name" } }),
+                _c("jet-label", { attrs: { for: "name", value: "Navn" } }),
                 _vm._v(" "),
                 _c("jet-input", {
                   staticClass: "mt-1 block w-full",
-                  attrs: { id: "name", type: "text", autocomplete: "name" },
+                  attrs: { id: "name", type: "text", autocomplete: "navn" },
                   model: {
                     value: _vm.form.name,
                     callback: function($$v) {
@@ -34111,7 +34126,7 @@ var render = function() {
               "div",
               { staticClass: "col-span-6 sm:col-span-4" },
               [
-                _c("jet-label", { attrs: { for: "email", value: "Email" } }),
+                _c("jet-label", { attrs: { for: "email", value: "E-mail" } }),
                 _vm._v(" "),
                 _c("jet-input", {
                   staticClass: "mt-1 block w-full",
@@ -34191,7 +34206,15 @@ var render = function() {
                 })
               ],
               1
-            )
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
+              _c("p", { staticClass: "text-sm text-gray-600" }, [
+                _vm._v(
+                  "Postnummer og fødselsår bruges udelukkende til statistik formål. De gives ikke videre, og står ikke offentligt. Det er frivilligt om du gerne vil skrive det. Det har ingen indflydelse på din brugeroplevelse hos Wign."
+                )
+              ])
+            ])
           ]
         },
         proxy: true
@@ -34206,7 +34229,7 @@ var render = function() {
                 staticClass: "mr-3",
                 attrs: { on: _vm.form.recentlySuccessful }
               },
-              [_vm._v("\n            Saved.\n        ")]
+              [_vm._v("\n            Gemt.\n        ")]
             ),
             _vm._v(" "),
             _c(
@@ -34215,7 +34238,7 @@ var render = function() {
                 class: { "opacity-25": _vm.form.processing },
                 attrs: { disabled: _vm.form.processing }
               },
-              [_vm._v("\n            Save\n        ")]
+              [_vm._v("\n            Gem\n        ")]
             )
           ]
         },

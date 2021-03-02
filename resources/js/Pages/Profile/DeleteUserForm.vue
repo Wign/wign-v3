@@ -1,32 +1,32 @@
 <template>
     <jet-action-section>
         <template #title>
-            Delete Account
+            Slet brugerkonto
         </template>
 
         <template #description>
-            Permanently delete your account.
+            Slet din konto permanent.
         </template>
 
         <template #content>
             <div class="max-w-xl text-sm text-gray-600">
-                Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.
+                Så snart din konto er slettet, slettes alt ressourcer og data permanent. Inden du sletter din konto, skal du sørge for at downloade de data du gerne vil beholde.
             </div>
 
             <div class="mt-5">
                 <jet-danger-button @click.native="confirmUserDeletion">
-                    Delete Account
+                    Slet Brugerkonto
                 </jet-danger-button>
             </div>
 
             <!-- Delete Account Confirmation Modal -->
             <jet-dialog-modal :show="confirmingUserDeletion" @close="closeModal">
                 <template #title>
-                    Delete Account
+                    Slet Brugerkonto
                 </template>
 
                 <template #content>
-                    Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.
+                    Er du sikker på, at du gerne vil slette din konto? Når din konto er slettet, slettes alt ressourcer og data permanent. Indtast venligst din password for at bekræfte, at du gerne vil slette din konto permanent.
 
                     <div class="mt-4">
                         <jet-input type="password" class="mt-1 block w-3/4" placeholder="Password"
@@ -40,11 +40,11 @@
 
                 <template #footer>
                     <jet-secondary-button @click.native="closeModal">
-                        Nevermind
+                        Glem det
                     </jet-secondary-button>
 
                     <jet-danger-button class="ml-2" @click.native="deleteUser" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                        Delete Account
+                        Slet min konto
                     </jet-danger-button>
                 </template>
             </jet-dialog-modal>

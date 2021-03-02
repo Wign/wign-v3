@@ -6,11 +6,11 @@
 
         <div class="mb-4 text-sm text-gray-600">
             <template v-if="! recovery">
-                Please confirm access to your account by entering the authentication code provided by your authenticator application.
+                Bekræft venligst adgang til din konto ved at indtaste den godkendelseskode, der leveres af din to-faktor godkendelsesapp.
             </template>
 
             <template v-else>
-                Please confirm access to your account by entering one of your emergency recovery codes.
+                Bekræft venligst adgang til din konto ved at indtaste en af dine gendannelseskoder.
             </template>
         </div>
 
@@ -30,16 +30,16 @@
             <div class="flex items-center justify-end mt-4">
                 <button type="button" class="text-sm text-gray-600 hover:text-gray-900 underline cursor-pointer" @click.prevent="toggleRecovery">
                     <template v-if="! recovery">
-                        Use a recovery code
+                        Brug en gendannelseskode
                     </template>
 
                     <template v-else>
-                        Use an authentication code
+                        Brug en godkendelseskode
                     </template>
                 </button>
 
                 <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Login
+                    Log ind
                 </jet-button>
             </div>
         </form>
