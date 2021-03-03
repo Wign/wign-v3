@@ -13,10 +13,12 @@ Redesigned by André Jensen
 - [X] Opsætning
 - [X] Database migrations
 - [X] Seeds & Factories
+- [X] Installere Xdebug ti lDocker  
 - [X] Bruger registering + postnr + dob
 - [X] Brugerprofil inkl. feltene
-- [ ] Oversætte til dansk i de sider der er "fabrikslavet" fra Jetstream
-- [ ] Localization af resten af Laravel (validationsbeskeder osv)
+- [X] Oversætte til dansk i de sider der er "fabrikslavet" fra Jetstream
+- [X] Localization af resten af Laravel (validationsbeskeder osv)
+- [X] Sørg for Cookiepolitik, privatslivspolitk samt servicevilkår  
 - [ ] Generelle sider og templates på plads
 - [ ] Design overføre fra v2
     - [ ] Logo
