@@ -24,7 +24,7 @@
 
             <template #footer>
                 <jet-secondary-button @click.native="closeModal">
-                    Nevermind
+                    Glem det
                 </jet-secondary-button>
 
                 <jet-button class="ml-2" @click.native="confirmPassword" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
@@ -45,13 +45,13 @@
     export default {
         props: {
             title: {
-                default: 'Confirm Password',
+                default: 'Bekræft Password',
             },
             content: {
-                default: 'For your security, please confirm your password to continue.',
+                default: 'For sikkerhedens skyld skal du bekræfte din adgangskode for at fortsætte.',
             },
             button: {
-                default: 'Confirm',
+                default: 'Bekræft',
             }
         },
 

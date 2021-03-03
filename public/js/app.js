@@ -3211,13 +3211,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     title: {
-      "default": 'Confirm Password'
+      "default": 'Bekræft Password'
     },
     content: {
-      "default": 'For your security, please confirm your password to continue.'
+      "default": 'For sikkerhedens skyld skal du bekræfte din adgangskode for at fortsætte.'
     },
     button: {
-      "default": 'Confirm'
+      "default": 'Bekræft'
     }
   },
   components: {
@@ -28327,35 +28327,115 @@ var render = function() {
     "svg",
     {
       attrs: {
-        viewBox: "0 0 317 48",
-        fill: "none",
-        xmlns: "http://www.w3.org/2000/svg"
+        xmlns: "http://www.w3.org/2000/svg",
+        "xmlns:xlink": "http://www.w3.org/1999/xlink",
+        viewBox: "0 0 1320.94 368.59",
+        fill: "none"
       }
     },
     [
-      _c("path", {
-        attrs: {
-          d:
-            "M74.09 30.04V13h-4.14v21H82.1v-3.96h-8.01zM95.379 19v1.77c-1.08-1.35-2.7-2.19-4.89-2.19-3.99 0-7.29 3.45-7.29 7.92s3.3 7.92 7.29 7.92c2.19 0 3.81-.84 4.89-2.19V34h3.87V19h-3.87zm-4.17 11.73c-2.37 0-4.14-1.71-4.14-4.23 0-2.52 1.77-4.23 4.14-4.23 2.4 0 4.17 1.71 4.17 4.23 0 2.52-1.77 4.23-4.17 4.23zM106.628 21.58V19h-3.87v15h3.87v-7.17c0-3.15 2.55-4.05 4.56-3.81V18.7c-1.89 0-3.78.84-4.56 2.88zM124.295 19v1.77c-1.08-1.35-2.7-2.19-4.89-2.19-3.99 0-7.29 3.45-7.29 7.92s3.3 7.92 7.29 7.92c2.19 0 3.81-.84 4.89-2.19V34h3.87V19h-3.87zm-4.17 11.73c-2.37 0-4.14-1.71-4.14-4.23 0-2.52 1.77-4.23 4.14-4.23 2.4 0 4.17 1.71 4.17 4.23 0 2.52-1.77 4.23-4.17 4.23zM141.544 19l-3.66 10.5-3.63-10.5h-4.26l5.7 15h4.41l5.7-15h-4.26zM150.354 28.09h11.31c.09-.51.15-1.02.15-1.59 0-4.41-3.15-7.92-7.59-7.92-4.71 0-7.92 3.45-7.92 7.92s3.18 7.92 8.22 7.92c2.88 0 5.13-1.17 6.54-3.21l-3.12-1.8c-.66.87-1.86 1.5-3.36 1.5-2.04 0-3.69-.84-4.23-2.82zm-.06-3c.45-1.92 1.86-3.03 3.93-3.03 1.62 0 3.24.87 3.72 3.03h-7.65zM164.516 34h3.87V12.1h-3.87V34zM185.248 34.36c3.69 0 6.9-2.01 6.9-6.3V13h-2.1v15.06c0 3.03-2.07 4.26-4.8 4.26-2.19 0-3.93-.78-4.62-2.61l-1.77 1.05c1.05 2.43 3.57 3.6 6.39 3.6zM203.124 18.64c-4.65 0-7.83 3.45-7.83 7.86 0 4.53 3.24 7.86 7.98 7.86 3.03 0 5.34-1.41 6.6-3.45l-1.74-1.02c-.81 1.44-2.46 2.55-4.83 2.55-3.18 0-5.55-1.89-5.97-4.95h13.17c.03-.3.06-.63.06-.93 0-4.11-2.85-7.92-7.44-7.92zm0 1.92c2.58 0 4.98 1.71 5.4 5.01h-11.19c.39-2.94 2.64-5.01 5.79-5.01zM221.224 20.92V19h-4.32v-4.2l-1.98.6V19h-3.15v1.92h3.15v9.09c0 3.6 2.25 4.59 6.3 3.99v-1.74c-2.91.12-4.32.33-4.32-2.25v-9.09h4.32zM225.176 22.93c0-1.62 1.59-2.37 3.15-2.37 1.44 0 2.97.57 3.6 2.1l1.65-.96c-.87-1.86-2.79-3.06-5.25-3.06-3 0-5.13 1.89-5.13 4.29 0 5.52 8.76 3.39 8.76 7.11 0 1.77-1.68 2.4-3.45 2.4-2.01 0-3.57-.99-4.11-2.52l-1.68.99c.75 1.92 2.79 3.45 5.79 3.45 3.21 0 5.43-1.77 5.43-4.32 0-5.52-8.76-3.39-8.76-7.11zM244.603 20.92V19h-4.32v-4.2l-1.98.6V19h-3.15v1.92h3.15v9.09c0 3.6 2.25 4.59 6.3 3.99v-1.74c-2.91.12-4.32.33-4.32-2.25v-9.09h4.32zM249.883 21.49V19h-1.98v15h1.98v-8.34c0-3.72 2.34-4.98 4.74-4.98v-1.92c-1.92 0-3.69.63-4.74 2.73zM263.358 18.64c-4.65 0-7.83 3.45-7.83 7.86 0 4.53 3.24 7.86 7.98 7.86 3.03 0 5.34-1.41 6.6-3.45l-1.74-1.02c-.81 1.44-2.46 2.55-4.83 2.55-3.18 0-5.55-1.89-5.97-4.95h13.17c.03-.3.06-.63.06-.93 0-4.11-2.85-7.92-7.44-7.92zm0 1.92c2.58 0 4.98 1.71 5.4 5.01h-11.19c.39-2.94 2.64-5.01 5.79-5.01zM286.848 19v2.94c-1.26-2.01-3.39-3.3-6.06-3.3-4.23 0-7.74 3.42-7.74 7.86s3.51 7.86 7.74 7.86c2.67 0 4.8-1.29 6.06-3.3V34h1.98V19h-1.98zm-5.91 13.44c-3.33 0-5.91-2.61-5.91-5.94 0-3.33 2.58-5.94 5.91-5.94s5.91 2.61 5.91 5.94c0 3.33-2.58 5.94-5.91 5.94zM309.01 18.64c-1.92 0-3.75.87-4.86 2.73-.84-1.74-2.46-2.73-4.56-2.73-1.8 0-3.42.72-4.59 2.55V19h-1.98v15H295v-8.31c0-3.72 2.16-5.13 4.32-5.13 2.13 0 3.51 1.41 3.51 4.08V34h1.98v-8.31c0-3.72 1.86-5.13 4.17-5.13 2.13 0 3.66 1.41 3.66 4.08V34h1.98v-9.36c0-3.75-2.31-6-5.61-6z",
-          fill: "#000"
-        }
-      }),
+      _c(
+        "defs",
+        [
+          _c(
+            "linearGradient",
+            {
+              attrs: {
+                id: "a",
+                x1: "179.4",
+                y1: "24.2",
+                x2: "179.4",
+                y2: "391.45",
+                gradientUnits: "userSpaceOnUse"
+              }
+            },
+            [
+              _c("stop", { attrs: { offset: "0", "stop-color": "#5cffc4" } }),
+              _vm._v(" "),
+              _c("stop", { attrs: { offset: "1", "stop-color": "#5cc4c4" } })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("linearGradient", {
+            attrs: {
+              id: "b",
+              x1: "185.58",
+              y1: "24.2",
+              x2: "185.58",
+              y2: "391.45",
+              "xlink:href": "#a"
+            }
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("path", {
-        attrs: {
-          d:
-            "M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z",
-          fill: "#6875F5"
-        }
-      }),
+      _c("g", [
+        _c("path", {
+          attrs: {
+            d:
+              "M55.55,220.48l18.32-58.74H130l19.23,61.66L188,107.11h57.27l17.76,57,17.76-57h55.94A184.25,184.25,0,0,0,22.06,117.27Z",
+            transform: "translate(-22.06 -23.64)",
+            fill: "url(#a)"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M309.43,195.39l-18.32,58.75H235l-19.23-61.66L177,308.76H119.71L102,251.81,84.19,308.76H28.25a184.26,184.26,0,0,0,314.67-10.15Z",
+            transform: "translate(-22.06 -23.64)",
+            fill: "url(#b)"
+          }
+        })
+      ]),
       _vm._v(" "),
-      _c("path", {
-        attrs: {
-          d:
-            "M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z",
-          fill: "#6875F5"
-        }
-      })
+      _c("g", [
+        _c("path", {
+          attrs: {
+            d:
+              "M1096.79,195.79l-18.68,105.65S1043.52,323,995.41,323s-107.17-21.48-107.17-97.25S945.91,96.69,1018,96.69c37.56,0,64.38,12.4,80.29,29.84l-46.42,49.95a43,43,0,0,0-35.21-17.78c-26.48,0-55.32,23.15-55.32,61.7s30.85,42.25,41.58,42.25a70.65,70.65,0,0,0,20.45-3.36l3.18-17.25h-34.1l8.23-46.25Z",
+            transform: "translate(-22.06 -23.64)",
+            fill: "#171717"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M478.11,317.3h54.35A27,27,0,0,0,557,301.58l49.22-107,9.51,122.74h70.66L787.7,103.06H712.8l-50.62,123-3-123H586.74l-50.29,123-9.53-123h-65.4Z",
+            transform: "translate(-22.06 -23.64)",
+            fill: "#171717"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M1146.7,103.06h68.66l43.44,111.35,19.35-111.35H1343L1305.78,317.3h-68.7l-41.43-106.77-14.71,84.41a27,27,0,0,1-26.59,22.36h-44.87Z",
+            transform: "translate(-22.06 -23.64)",
+            fill: "#171717"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d: "M803,158h67.31l-23.79,137A27,27,0,0,1,819.9,317.3H775.29Z",
+            transform: "translate(-22.06 -23.64)",
+            fill: "#171717"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M878.55,107.71A38.16,38.16,0,0,1,841,146.06c-18.61,0-33.69-11.32-33.69-30.72,0-17,13.7-37.43,37-37.43C862.84,77.91,878.55,90.74,878.55,107.71Z",
+            transform: "translate(-22.06 -23.64)",
+            fill: "#171717"
+          }
+        })
+      ])
     ]
   )
 }
@@ -28386,27 +28466,68 @@ var render = function() {
     "svg",
     {
       attrs: {
-        viewBox: "0 0 48 48",
-        fill: "none",
-        xmlns: "http://www.w3.org/2000/svg"
+        xmlns: "http://www.w3.org/2000/svg",
+        "xmlns:xlink": "http://www.w3.org/1999/xlink",
+        viewBox: "0 0 341.02 391.75",
+        fill: "none"
       }
     },
     [
-      _c("path", {
-        attrs: {
-          d:
-            "M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z",
-          fill: "#6875F5"
-        }
-      }),
+      _c(
+        "defs",
+        [
+          _c(
+            "linearGradient",
+            {
+              attrs: {
+                id: "a",
+                x1: "205.2",
+                y1: "12.66",
+                x2: "205.2",
+                y2: "402.98",
+                gradientUnits: "userSpaceOnUse"
+              }
+            },
+            [
+              _c("stop", { attrs: { offset: "0", "stop-color": "#5cffc4" } }),
+              _c("stop", { attrs: { offset: "1", "stop-color": "#5cc4c4" } })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("linearGradient", {
+            attrs: {
+              id: "b",
+              x1: "211.78",
+              y1: "12.66",
+              x2: "211.78",
+              y2: "402.98",
+              "xlink:href": "#a"
+            }
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("path", {
-        attrs: {
-          d:
-            "M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z",
-          fill: "#6875F5"
-        }
-      })
+      _c("g", [
+        _c("path", {
+          attrs: {
+            d:
+              "M73.57,221.27,93,158.83h59.7l20.43,65.54,41.17-123.59h60.88l18.87,60.53L313,100.78h59.45A195.82,195.82,0,0,0,38,111.57Z",
+            transform: "translate(-37.98 -12.06)",
+            fill: "url(#a)"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M343.41,194.6,323.94,257h-59.7l-20.43-65.53L202.64,315.1H141.76l-18.87-60.54L104,315.1H44.56A195.83,195.83,0,0,0,379,304.3Z",
+            transform: "translate(-37.98 -12.06)",
+            fill: "url(#b)"
+          }
+        })
+      ])
     ]
   )
 }
@@ -28483,27 +28604,68 @@ var render = function() {
       {
         staticClass: "w-16 h-16",
         attrs: {
-          viewBox: "0 0 48 48",
-          fill: "none",
-          xmlns: "http://www.w3.org/2000/svg"
+          xmlns: "http://www.w3.org/2000/svg",
+          "xmlns:xlink": "http://www.w3.org/1999/xlink",
+          viewBox: "0 0 341.02 391.75",
+          fill: "none"
         }
       },
       [
-        _c("path", {
-          attrs: {
-            d:
-              "M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z",
-            fill: "#6875F5"
-          }
-        }),
+        _c(
+          "defs",
+          [
+            _c(
+              "linearGradient",
+              {
+                attrs: {
+                  id: "a",
+                  x1: "205.2",
+                  y1: "12.66",
+                  x2: "205.2",
+                  y2: "402.98",
+                  gradientUnits: "userSpaceOnUse"
+                }
+              },
+              [
+                _c("stop", { attrs: { offset: "0", "stop-color": "#5cffc4" } }),
+                _c("stop", { attrs: { offset: "1", "stop-color": "#5cc4c4" } })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("linearGradient", {
+              attrs: {
+                id: "b",
+                x1: "211.78",
+                y1: "12.66",
+                x2: "211.78",
+                y2: "402.98",
+                "xlink:href": "#a"
+              }
+            })
+          ],
+          1
+        ),
         _vm._v(" "),
-        _c("path", {
-          attrs: {
-            d:
-              "M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z",
-            fill: "#6875F5"
-          }
-        })
+        _c("g", [
+          _c("path", {
+            attrs: {
+              d:
+                "M73.57,221.27,93,158.83h59.7l20.43,65.54,41.17-123.59h60.88l18.87,60.53L313,100.78h59.45A195.82,195.82,0,0,0,38,111.57Z",
+              transform: "translate(-37.98 -12.06)",
+              fill: "url(#a)"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M343.41,194.6,323.94,257h-59.7l-20.43-65.53L202.64,315.1H141.76l-18.87-60.54L104,315.1H44.56A195.83,195.83,0,0,0,379,304.3Z",
+              transform: "translate(-37.98 -12.06)",
+              fill: "url(#b)"
+            }
+          })
+        ])
       ]
     )
   ])
@@ -28990,7 +29152,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Nevermind\n            ")]
+                  [_vm._v("\n                Glem det\n            ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -29807,7 +29969,7 @@ var render = function() {
   return _vm.hasErrors
     ? _c("div", [
         _c("div", { staticClass: "font-medium text-red-600" }, [
-          _vm._v("Whoops! Something went wrong.")
+          _vm._v("Ups! Noget gik galt.")
         ]),
         _vm._v(" "),
         _c(
@@ -30612,7 +30774,7 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                        Manage Account\n                                    "
+                                          "\n                                        Brugerprofil\n                                    "
                                         )
                                       ]
                                     ),
@@ -30626,7 +30788,7 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                        Profile\n                                    "
+                                          "\n                                        Profil\n                                    "
                                         )
                                       ]
                                     ),
@@ -30643,7 +30805,7 @@ var render = function() {
                                           },
                                           [
                                             _vm._v(
-                                              "\n                                        API Tokens\n                                    "
+                                              "\n                                        API-Tokens\n                                    "
                                             )
                                           ]
                                         )
@@ -30669,7 +30831,7 @@ var render = function() {
                                           { attrs: { as: "button" } },
                                           [
                                             _vm._v(
-                                              "\n                                            Logout\n                                        "
+                                              "\n                                            Log ud\n                                        "
                                             )
                                           ]
                                         )
@@ -30831,7 +30993,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                            Profile\n                        "
+                              "\n                            Profil\n                        "
                             )
                           ]
                         ),
@@ -30849,7 +31011,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                            API Tokens\n                        "
+                                  "\n                            API-Tokens\n                        "
                                 )
                               ]
                             )
@@ -30872,7 +31034,7 @@ var render = function() {
                               { attrs: { as: "button" } },
                               [
                                 _vm._v(
-                                  "\n                                Logout\n                            "
+                                  "\n                                Log ud\n                            "
                                 )
                               ]
                             )
@@ -31083,7 +31245,7 @@ var render = function() {
           {
             key: "title",
             fn: function() {
-              return [_vm._v("\n            Create API Token\n        ")]
+              return [_vm._v("\n            Opret API-Token\n        ")]
             },
             proxy: true
           },
@@ -31092,7 +31254,7 @@ var render = function() {
             fn: function() {
               return [
                 _vm._v(
-                  "\n            API tokens allow third-party services to authenticate with our application on your behalf.\n        "
+                  "\n            API-tokens tillader tredjeparts-tjenester at autentificere med Wign på dine vegne.\n        "
                 )
               ]
             },
@@ -31199,7 +31361,7 @@ var render = function() {
                     staticClass: "mr-3",
                     attrs: { on: _vm.createApiTokenForm.recentlySuccessful }
                   },
-                  [_vm._v("\n                Created.\n            ")]
+                  [_vm._v("\n                Oprettet.\n            ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -31208,7 +31370,7 @@ var render = function() {
                     class: { "opacity-25": _vm.createApiTokenForm.processing },
                     attrs: { disabled: _vm.createApiTokenForm.processing }
                   },
-                  [_vm._v("\n                Create\n            ")]
+                  [_vm._v("\n                Opret\n            ")]
                 )
               ]
             },
@@ -31235,7 +31397,7 @@ var render = function() {
                           fn: function() {
                             return [
                               _vm._v(
-                                "\n                    Manage API Tokens\n                "
+                                "\n                    Administrer API-tokens\n                "
                               )
                             ]
                           },
@@ -31246,7 +31408,7 @@ var render = function() {
                           fn: function() {
                             return [
                               _vm._v(
-                                "\n                    You may delete any of your existing tokens if they are no longer needed.\n                "
+                                "\n                    Du kan slette nogen af dine eksisterende tokens, hvis de ikke længere er nødvendige.\n                "
                               )
                             ]
                           },
@@ -31289,7 +31451,7 @@ var render = function() {
                                                 },
                                                 [
                                                   _vm._v(
-                                                    "\n                                    Last used " +
+                                                    "\n                                    Senest brugt " +
                                                       _vm._s(
                                                         token.last_used_ago
                                                       ) +
@@ -31315,7 +31477,7 @@ var render = function() {
                                                 },
                                                 [
                                                   _vm._v(
-                                                    "\n                                    Permissions\n                                "
+                                                    "\n                                    Tilladelser\n                                "
                                                   )
                                                 ]
                                               )
@@ -31336,7 +31498,7 @@ var render = function() {
                                             },
                                             [
                                               _vm._v(
-                                                "\n                                    Delete\n                                "
+                                                "\n                                    Slet\n                                "
                                               )
                                             ]
                                           )
@@ -31354,7 +31516,7 @@ var render = function() {
                       ],
                       null,
                       false,
-                      3995867736
+                      1048347964
                     )
                   })
                 ],
@@ -31376,7 +31538,7 @@ var render = function() {
           {
             key: "title",
             fn: function() {
-              return [_vm._v("\n            API Token\n        ")]
+              return [_vm._v("\n            API-Token\n        ")]
             },
             proxy: true
           },
@@ -31386,7 +31548,7 @@ var render = function() {
               return [
                 _c("div", [
                   _vm._v(
-                    "\n                Please copy your new API token. For your security, it won't be shown again.\n            "
+                    "\n                Kopier venligst dit nye API-token. Af hensyn til sikkerheden vises token ikke igen.\n            "
                   )
                 ]),
                 _vm._v(" "),
@@ -31423,7 +31585,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Close\n            ")]
+                  [_vm._v("\n                Luk\n            ")]
                 )
               ]
             },
@@ -31443,7 +31605,7 @@ var render = function() {
           {
             key: "title",
             fn: function() {
-              return [_vm._v("\n            API Token Permissions\n        ")]
+              return [_vm._v("\n            API-Token tilladelser\n        ")]
             },
             proxy: true
           },
@@ -31504,7 +31666,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Nevermind\n            ")]
+                  [_vm._v("\n                Glem det\n            ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -31519,7 +31681,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Save\n            ")]
+                  [_vm._v("\n                Gem\n            ")]
                 )
               ]
             },
@@ -31539,7 +31701,7 @@ var render = function() {
           {
             key: "title",
             fn: function() {
-              return [_vm._v("\n            Delete API Token\n        ")]
+              return [_vm._v("\n            Slet API-Token\n        ")]
             },
             proxy: true
           },
@@ -31548,7 +31710,7 @@ var render = function() {
             fn: function() {
               return [
                 _vm._v(
-                  "\n            Are you sure you would like to delete this API token?\n        "
+                  "\n            Er du sikker på, at du vil slette dette API-token?\n        "
                 )
               ]
             },
@@ -31567,7 +31729,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Nevermind\n            ")]
+                  [_vm._v("\n                Glem det\n            ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -31582,7 +31744,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Delete\n            ")]
+                  [_vm._v("\n                Slet\n            ")]
                 )
               ]
             },
@@ -31631,7 +31793,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            API Tokens\n        ")]
+                [_vm._v("\n            API-Tokens\n        ")]
               )
             ]
           },

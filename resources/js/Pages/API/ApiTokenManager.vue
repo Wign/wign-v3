@@ -3,11 +3,11 @@
         <!-- Generate API Token -->
         <jet-form-section @submitted="createApiToken">
             <template #title>
-                Create API Token
+                Opret API-Token
             </template>
 
             <template #description>
-                API tokens allow third-party services to authenticate with our application on your behalf.
+                API-tokens tillader tredjeparts-tjenester at autentificere med Wign på dine vegne.
             </template>
 
             <template #form>
@@ -35,11 +35,11 @@
 
             <template #actions>
                 <jet-action-message :on="createApiTokenForm.recentlySuccessful" class="mr-3">
-                    Created.
+                    Oprettet.
                 </jet-action-message>
 
                 <jet-button :class="{ 'opacity-25': createApiTokenForm.processing }" :disabled="createApiTokenForm.processing">
-                    Create
+                    Opret
                 </jet-button>
             </template>
         </jet-form-section>
@@ -51,11 +51,11 @@
             <div class="mt-10 sm:mt-0">
                 <jet-action-section>
                     <template #title>
-                        Manage API Tokens
+                        Administrer API-tokens
                     </template>
 
                     <template #description>
-                        You may delete any of your existing tokens if they are no longer needed.
+                        Du kan slette nogen af dine eksisterende tokens, hvis de ikke længere er nødvendige.
                     </template>
 
                     <!-- API Token List -->
@@ -68,18 +68,18 @@
 
                                 <div class="flex items-center">
                                     <div class="text-sm text-gray-400" v-if="token.last_used_ago">
-                                        Last used {{ token.last_used_ago }}
+                                        Senest brugt {{ token.last_used_ago }}
                                     </div>
 
                                     <button class="cursor-pointer ml-6 text-sm text-gray-400 underline"
                                         @click="manageApiTokenPermissions(token)"
                                         v-if="availablePermissions.length > 0"
                                     >
-                                        Permissions
+                                        Tilladelser
                                     </button>
 
                                     <button class="cursor-pointer ml-6 text-sm text-red-500" @click="confirmApiTokenDeletion(token)">
-                                        Delete
+                                        Slet
                                     </button>
                                 </div>
                             </div>
@@ -92,12 +92,12 @@
         <!-- Token Value Modal -->
         <jet-dialog-modal :show="displayingToken" @close="displayingToken = false">
             <template #title>
-                API Token
+                API-Token
             </template>
 
             <template #content>
                 <div>
-                    Please copy your new API token. For your security, it won't be shown again.
+                    Kopier venligst dit nye API-token. Af hensyn til sikkerheden vises token ikke igen.
                 </div>
 
                 <div class="mt-4 bg-gray-100 px-4 py-2 rounded font-mono text-sm text-gray-500" v-if="$page.props.jetstream.flash.token">
@@ -107,7 +107,7 @@
 
             <template #footer>
                 <jet-secondary-button @click.native="displayingToken = false">
-                    Close
+                    Luk
                 </jet-secondary-button>
             </template>
         </jet-dialog-modal>
@@ -115,7 +115,7 @@
         <!-- API Token Permissions Modal -->
         <jet-dialog-modal :show="managingPermissionsFor" @close="managingPermissionsFor = null">
             <template #title>
-                API Token Permissions
+                API-Token tilladelser
             </template>
 
             <template #content>
@@ -131,11 +131,11 @@
 
             <template #footer>
                 <jet-secondary-button @click.native="managingPermissionsFor = null">
-                    Nevermind
+                    Glem det
                 </jet-secondary-button>
 
                 <jet-button class="ml-2" @click.native="updateApiToken" :class="{ 'opacity-25': updateApiTokenForm.processing }" :disabled="updateApiTokenForm.processing">
-                    Save
+                    Gem
                 </jet-button>
             </template>
         </jet-dialog-modal>
@@ -143,20 +143,20 @@
         <!-- Delete Token Confirmation Modal -->
         <jet-confirmation-modal :show="apiTokenBeingDeleted" @close="apiTokenBeingDeleted = null">
             <template #title>
-                Delete API Token
+                Slet API-Token
             </template>
 
             <template #content>
-                Are you sure you would like to delete this API token?
+                Er du sikker på, at du vil slette dette API-token?
             </template>
 
             <template #footer>
                 <jet-secondary-button @click.native="apiTokenBeingDeleted = null">
-                    Nevermind
+                    Glem det
                 </jet-secondary-button>
 
                 <jet-danger-button class="ml-2" @click.native="deleteApiToken" :class="{ 'opacity-25': deleteApiTokenForm.processing }" :disabled="deleteApiTokenForm.processing">
-                    Delete
+                    Slet
                 </jet-danger-button>
             </template>
         </jet-confirmation-modal>
