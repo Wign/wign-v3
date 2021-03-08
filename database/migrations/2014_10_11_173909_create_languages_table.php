@@ -15,7 +15,7 @@ class CreateLanguagesTable extends Migration
     {
         Schema::create('languages', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->unique();
+            $table->string('code')->unique()->index();
             $table->string('text')->nullable();
             $table->enum('type', ['TEXT', 'SIGN'])->index();
             $table->softDeletes();
