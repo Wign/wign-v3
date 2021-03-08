@@ -66,8 +66,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
         return [
             'name' => $input['name'],
             'email' => $input['email'],
-            'postnr' => $input['postnr'],
-            'dob' => $input['dob']
+            'postnr' => $input['postnr'] ?? null,
+            'dob' => $input['dob'] ?? null
         ];
     }
 }

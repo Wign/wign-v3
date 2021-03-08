@@ -16,7 +16,7 @@ class CreateNewUser implements CreatesNewUsers
     /**
      * Validate and create a newly registered user.
      *
-     * @param  array  $input
+     * @param array $input
      * @return User
      */
     public function create(array $input)
@@ -26,7 +26,7 @@ class CreateNewUser implements CreatesNewUsers
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
             'postnr' => ['nullable', 'numeric', 'min:1000', 'max:9990'],
-            'dob' => ['nullable', 'numeric', 'min:1900', 'max:'.Carbon::now()->year],
+            'dob' => ['nullable', 'numeric', 'min:1900', 'max:' . Carbon::now()->year],
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
 
@@ -34,8 +34,8 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
-            'postnr' => $input['postnr'],
-            'dob' => $input['dob']
+            'postnr' => $input['postnr'] ?? null,
+            'dob' => $input['dob'] ?? null
         ]);
     }
 }

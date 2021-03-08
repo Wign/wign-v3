@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Language;
 use App\Models\Sign;
-use App\Models\User;
 use App\Models\Word;
 use App\Providers\FakerProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -35,7 +35,7 @@ class SignFactory extends Factory
             'thumbnail_url' => $url . 'assets/' . $videoUUID . '/vga_thumb.png',
             'small_thumbnail_url' => $url . 'assets/' . $videoUUID . '/qvga_thumb.jpg',
             'playings' => $this->faker->numberBetween(0, 1000),
-            'sign_language_id' => 2,
+            'sign_language_id' => Language::factory()->sign(),
             'word_id' => Word::factory()
         ];
     }

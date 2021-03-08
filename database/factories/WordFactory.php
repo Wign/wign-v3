@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Language;
 use App\Models\User;
 use App\Models\Word;
 use App\Providers\FakerProvider;
@@ -27,7 +28,7 @@ class WordFactory extends Factory
 
         return [
             'literal' => $this->faker->unique()->wignLiterals,
-            'language_id' => 1,
+            'language_id' => Language::factory()->text(),
             'creator_id' => User::factory(),
             'editor_id' => function (array $attributes) {
                 return $attributes['creator_id'];
