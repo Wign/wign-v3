@@ -11,9 +11,13 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Titillium Web', ...defaultTheme.fontFamily.sans],
             },
-        },
+            colors: {
+                'wign-green': '#86CDAF',
+                'wign-turkis': '#5CC5C5'
+            }
+        }
     },
 
     variants: {

@@ -8,7 +8,7 @@
         <title>{{ config('app.name', 'Wign') }}</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -16,6 +16,8 @@
         <!-- Scripts -->
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src='//cameratag.com/v14/js/cameratag.min.js' type='text/javascript'></script>
+        <link rel='stylesheet' href='//cameratag.com/static/14/cameratag.css'>
     </head>
     <body class="font-sans antialiased">
         @inertia

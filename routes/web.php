@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\SignController;
+use App\Http\Controllers\ViewsController;
+use App\Http\Controllers\WordController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -23,6 +26,11 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::get('/words', [WordController::class, 'show']);
+Route::get('/randomSign', [SignController::class, 'random']);
+
+Route::post('/played', [ViewsController::class, 'increment']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
