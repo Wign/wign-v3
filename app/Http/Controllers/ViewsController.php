@@ -22,7 +22,8 @@ class ViewsController extends Controller
         }
 
         $result = $sign->increment('playings');
+        $sucess = $result == 1;
 
-        return ['success' => $result == 1, 'playings' => $sign->playings];
+        return response()->json(['success' => $sucess, 'playings' => $sign->playings], $sucess ? 200 : 400);
     }
 }

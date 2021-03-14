@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\SignController;
 use App\Http\Controllers\ViewsController;
 use App\Http\Controllers\WordController;
@@ -31,6 +32,7 @@ Route::get('/words', [WordController::class, 'show']);
 Route::get('/randomSign', [SignController::class, 'random']);
 
 Route::post('/played', [ViewsController::class, 'increment']);
+Route::post('/liked', [LikeController::class, 'toggleLike']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');

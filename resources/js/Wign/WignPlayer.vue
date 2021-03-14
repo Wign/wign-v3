@@ -14,11 +14,12 @@
 <script>
 export default {
     props: {
+        sign_id: Number,
         video_uuid: String
     },
     data: function () {
         return {
-            id: this.$uuid.v4(),
+            id: 'video_'+this.sign_id,
             appid: 'a-49088bd0-39cc-0132-ccc4-12313914f10b',
             controls: true.toString(),
             displayTitle: false.toString(),
@@ -29,11 +30,15 @@ export default {
         }
     },
     mounted() {
-        CameraTag.observe(this.id, "play", () => this.emitPlayed());
+        CameraTag.observe(this.id, "play", () => this.played());
     },
     methods: {
-        emitPlayed: function () {
-            this.$emit('played');
+        played: function () {
+            axios
+                .post('/played', {signId: this.sign_id})
+                .then(r => (
+                    this.$emit('played', r.data.playings)
+                ));
         }
     }
 }

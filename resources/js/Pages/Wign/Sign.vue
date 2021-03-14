@@ -1,29 +1,27 @@
 <template>
     <div>
-        <WignPlayer :video_uuid=sign.video_uuid v-on:played="videoPlayed"></WignPlayer>
+        <WignPlayer :video_uuid=sign.video_uuid :sign_id="sign.id" v-on:played="videoPlayed" />
         <div>Playings: {{ playings }}</div>
+        <WignLiker :sign_id="sign.id" :count="sign.likes_count" :liked="sign.liked" />
     </div>
 </template>
 
 <script>
 import WignPlayer from "../../Wign/WignPlayer";
+import WignLiker from "../../Wign/WignLiker";
 
 export default {
-    components: {WignPlayer},
+    components: {WignPlayer, WignLiker},
     props: ['sign'],
     data: function () {
         return {
-            playings: this.$props.sign.playings
+            playings: this.sign.playings
         }
     },
     methods: {
-        videoPlayed: function () {
-            console.log("Emitting played got! Trying to post!");
-            axios
-                .post('/played', {signId: this.$props.sign.id})
-                .then(r => (
-                    this.playings = r.data.playings
-                ));
+        videoPlayed: function (value) {
+            console.log("Emitting played count got! Trying to replace!");
+            this.playings = value;
         },
     }
 }

@@ -6,6 +6,7 @@ use App\Models\Sign;
 use App\Models\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Validation\ValidationException;
 use Tests\TestCase;
 
 class ViewTest extends TestCase
@@ -71,5 +72,11 @@ class ViewTest extends TestCase
             ->assertStatus(404)
             ->assertSeeText("Ikke fundet")
             ->assertJson(['exception' => ModelNotFoundException::class]);
+    }
+
+    public function test_sign_view_increment_wrong_input()
+    {
+        $response = $this->post('/played', ['signId' => 'lol!']);
+        $response->assertRedirect('/')->assertSessionHasErrors('signId');
     }
 }
