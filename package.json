@@ -29,6 +29,6 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "vue-uuid": "^2.0.2"
+        "v-tooltip": "^3.0.0-alpha.21"
     }
 }

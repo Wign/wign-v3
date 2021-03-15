@@ -2,14 +2,16 @@ require('./bootstrap');
 
 // Import modules...
 import Vue from 'vue';
-import { App as InertiaApp, plugin as InertiaPlugin } from '@inertiajs/inertia-vue';
+import {App as InertiaApp, plugin as InertiaPlugin} from '@inertiajs/inertia-vue';
 import PortalVue from 'portal-vue';
-import UUID from 'vue-uuid';
+import VTooltip from 'v-tooltip';
 
-Vue.mixin({ methods: { route } });
+Vue.mixin({methods: {route}});
 Vue.use(InertiaPlugin);
 Vue.use(PortalVue);
-Vue.use(UUID);
+Vue.use(VTooltip);
+
+import 'v-tooltip/dist/v-tooltip.css';
 
 const app = document.getElementById('app');
 
