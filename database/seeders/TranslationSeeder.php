@@ -28,8 +28,8 @@ class TranslationSeeder extends Seeder
         User::factory()->count($countUser)->create()->each(function (User $user) use ($countTranslations) {
 
             for($i = 0; $i < $countTranslations; $i++) {
-                $word = Word::factory()->create(['creator_id' => $user->id, 'editor_id' => $user->id]);
-                $sign = Sign::factory()->create(['creator_id' => $user->id, 'word_id' => $word->id]);
+                $word = Word::factory()->create(['creator_id' => $user->id, 'editor_id' => $user->id, 'language_id'  => 1]);
+                $sign = Sign::factory()->create(['creator_id' => $user->id, 'word_id' => $word->id, 'sign_language_id' => 2]);
                 Description::factory()->create(['sign_id' => $sign->id]);
             }
         });
