@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\SignController;
 use App\Http\Controllers\ViewsController;
@@ -28,8 +30,11 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/words', [WordController::class, 'show']);
-Route::get('/randomSign', [SignController::class, 'random']);
+Route::get('/about', [AboutController::class, 'show'])->name('about');
+Route::get('/contact', [ContactController::class, 'show'])->name('contact');
+
+Route::get('/words', [WordController::class, 'show'])->name('words');
+Route::get('/randomSign', [SignController::class, 'random'])->name('randomSign');
 
 Route::post('/played', [ViewsController::class, 'increment']);
 Route::post('/liked', [LikeController::class, 'toggleLike']);

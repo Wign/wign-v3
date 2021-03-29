@@ -15,6 +15,9 @@ module.exports = {
             },
             colors: {
                 'wign-green': '#86CDAF',
+                'wign-green-10': 'rgba(134, 205, 175, 0.1)',
+                'wign-green-30': 'rgba(134, 205, 175, 0.3)',
+                'wign-green-700': '#4d997a',
                 'wign-turkis': '#5CC5C5'
             }
         }

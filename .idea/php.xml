@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="PhpDebugIgnoredPathsSettings">
+    <skipped_paths>
+      <skipped_path path="$PROJECT_DIR$/artisan" />
+      <skipped_path path="$PROJECT_DIR$/vendor" />
+    </skipped_paths>
+  </component>
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
@@ -233,8 +239,15 @@
     </servers>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
+  <component name="PhpStepFilterConfiguration">
+    <skipped_functions>
+      <skipped_function name="Illuminate\Foundation\Bootstrap\HandleExceptions-&gt;handleShutdown" />
+      <skipped_function name="Facade\FlareClient\Api-&gt;sendQueuedReports" />
+    </skipped_functions>
+  </component>
   <component name="PhpUnit">
     <phpunit_settings>
+      <phpunit_by_interpreter interpreter_id="4a118143-d7a4-4aeb-bc28-24ac6d9c48de" configuration_file_path="/var/www/html/phpunit.xml" custom_loader_path="/var/www/html/vendor/autoloader.php" phpunit_phar_path="/var/www/html/vendor/phpunit/phpunit" use_configuration_file="true" />
       <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
     </phpunit_settings>
   </component>

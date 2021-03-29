@@ -12,14 +12,14 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel='stylesheet' href='//cameratag.com/static/14/cameratag.css'>
 
         <!-- Scripts -->
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src='//cameratag.com/v14/js/cameratag.min.js' type='text/javascript'></script>
-        <link rel='stylesheet' href='//cameratag.com/static/14/cameratag.css'>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-summergreen-translucent-5">
         @inertia
     </body>
 </html>

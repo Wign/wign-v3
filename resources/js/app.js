@@ -11,6 +11,16 @@ Vue.use(InertiaPlugin);
 Vue.use(PortalVue);
 Vue.use(VTooltip);
 
+// Font Awesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+//import {  } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookSquare, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(faFacebookSquare, faGithub);
+
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+
 import 'v-tooltip/dist/v-tooltip.css';
 
 const app = document.getElementById('app');

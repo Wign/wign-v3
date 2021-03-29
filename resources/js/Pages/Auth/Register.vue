@@ -47,7 +47,7 @@
                         <jet-checkbox name="terms" id="terms" v-model="form.terms" />
 
                         <div class="ml-2">
-                            Jeg er indforstået med <a target="_blank" :href="route('terms.show')" class="underline text-sm text-gray-600 hover:text-gray-900">Terms of Service</a> og <a target="_blank" :href="route('policy.show')" class="underline text-sm text-gray-600 hover:text-gray-900">Privacy Policy</a>
+                            Jeg er indforstået med <a target="_blank" :href="route('terms.show')" class="underline text-sm text-gray-600 hover:text-gray-900">Servicevilkår</a> og <a target="_blank" :href="route('policy.show')" class="underline text-sm text-gray-600 hover:text-gray-900">Privatlivspolitik</a>
                         </div>
                     </div>
                 </jet-label>
