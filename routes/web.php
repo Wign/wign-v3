@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\RequestController;
 use App\Http\Controllers\SignController;
 use App\Http\Controllers\ViewsController;
 use App\Http\Controllers\WordController;
@@ -35,9 +37,12 @@ Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 
 Route::get('/words', [WordController::class, 'show'])->name('words');
 Route::get('/randomSign', [SignController::class, 'random'])->name('randomSign');
+Route::get('/randomRequests/{num?}', [RequestController::class, 'randomRequests'])->name('randomRequests');
 
 Route::post('/played', [ViewsController::class, 'increment']);
 Route::post('/liked', [LikeController::class, 'toggleLike']);
+
+Route::get('/index', [IndexController::class, 'show'])->name('index');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');

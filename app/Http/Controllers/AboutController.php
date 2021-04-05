@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Laravel\Jetstream\Jetstream;
 use League\CommonMark\CommonMarkConverter;
@@ -14,17 +13,16 @@ class AboutController extends Controller
     /**
      * Show the About Us page.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Inertia\Response
      */
-    public function show(Request $request)
+    public function show()
     {
         $aboutFile = Jetstream::localizedMarkdownPath('about.md');
 
         $environment = Environment::createCommonMarkEnvironment();
         $environment->addExtension(new GithubFlavoredMarkdownExtension());
 
-        return Inertia::render('Wign/About', [
+        return Inertia::render('About', [
             'about' => (new CommonMarkConverter([], $environment))->convertToHtml(file_get_contents($aboutFile)),
         ]);
     }

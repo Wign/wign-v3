@@ -10,6 +10,6 @@ class WordController extends Controller
     public function show()
     {
         $word = Word::all();
-        return Inertia::render('Wign/Words', ['words' => $word]);
+        return Inertia::render('Words', ['words' => $word]);
     }
 }

@@ -16,5 +16,13 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
  */
 class Request extends Pivot
 {
+    protected $table = 'requests';
 
+    public function word() {
+        return $this->belongsTo(Word::class);
+    }
+
+    public function requester() {
+        return $this->belongsTo(User::class);
+    }
 }

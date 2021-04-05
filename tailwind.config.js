@@ -18,9 +18,18 @@ module.exports = {
                 'wign-green-10': 'rgba(134, 205, 175, 0.1)',
                 'wign-green-30': 'rgba(134, 205, 175, 0.3)',
                 'wign-green-700': '#4d997a',
-                'wign-turkis': '#5CC5C5'
-            }
-        }
+                'wign-turkis': '#5CC5C5',
+                'translucent-80': 'rgba(255,255,255,0.80)',
+                'translucent-60': 'rgba(255,255,255,0.60)',
+                'translucent-25': 'rgba(255,255,255,0.25)',
+            },
+            boxShadow: {
+                box: '0 0 5px 2px rgba(0,0,0,0.15)',
+            },
+            borderRadius: {
+                DEFAULT: '2rem'
+            },
+        },
     },
 
     variants: {

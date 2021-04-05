@@ -1,3 +1,24 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.main-height {
+    /* Header: 65px, Footer: 64px */
+    min-height: calc(100vh - 64px - 65px);
+}
+
+.btn {
+    @apply inline-block appearance-none align-middle text-center whitespace-nowrap py-2 px-4 font-semibold leading-normal no-underline
+}
+
+.btn-turkis {
+    @apply bg-wign-turkis text-gray-100
+}
+
+.btn-turkis-outline {
+    @apply border border-wign-turkis text-gray-800 bg-white
+}
+
+.btn-turkis-outline:hover {
+    @apply bg-gray-300
+}

@@ -13,6 +13,6 @@ class ContactController extends Controller
      */
     public function show()
     {
-        return Inertia::render('Wign/Contact');
+        return Inertia::render('Contact');
     }
 }

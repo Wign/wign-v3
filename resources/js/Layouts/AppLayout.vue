@@ -4,7 +4,7 @@
         <Header />
 
         <!-- Page Content -->
-        <main class="flex-grow">
+        <main class="flex-grow" :style="backgroundStyle">
             <slot></slot>
         </main>
 
@@ -21,10 +21,18 @@ import Footer from "./Footer";
 import JetBanner from "../Jetstream/Banner"
 
 export default {
+    props: ['background'],
     components: {
         JetBanner,
         Header,
         Footer
+    },
+    computed: {
+        backgroundStyle() {
+            if(this.background) {
+                return "background: url('"+this.background+"') center center / cover no-repeat fixed;"
+            }
+        }
     }
 }
 </script>

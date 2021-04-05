@@ -5,12 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Sign;
 use Auth;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class SignController extends Controller
 {
-    public function random(Request $request)
+    public function random()
     {
         $user = Auth::user();
         $sign = Sign::withCount('likes')
@@ -22,6 +21,6 @@ class SignController extends Controller
             ->inRandomOrder()
             ->first();
         $sign->liked = isset($sign->liked) && $sign->liked == 1;
-        return Inertia::render('Wign/Sign', ['sign' => $sign]);
+        return Inertia::render('Sign', ['sign' => $sign]);
     }
 }
