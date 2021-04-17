@@ -46,6 +46,9 @@ RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-di
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+## Disable xdebug for cli commands
+RUN phpdismod -s cli xdebug
+
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.0
 
 RUN groupadd --force -g $WWWGROUP sail

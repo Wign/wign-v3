@@ -19,15 +19,15 @@ Redesigned by André Jensen
 - [X] Oversætte til dansk i de sider der er "fabrikslavet" fra Jetstream
 - [X] Localization af resten af Laravel (validationsbeskeder osv)
 - [X] Sørg for Cookiepolitik, privatslivspolitk samt servicevilkår  
-- [ ] Generelle sider og templates på plads
+- [X] Generelle sider og templates på plads
 - [ ] Design overføre fra v2
-    - [ ] Logo
-    - [ ] Header
+    - [X] Logo
+    - [X] Header
     - [ ] Søgefelt
     - [ ] Seneste tegn
     - [ ] Efterlyste tegn
     - [ ] Tegn-siden
-        - [ ] Like og unlike
-        - [ ] Playings & views +1 når man klikke på play 
+        - [X] Like og unlike
+        - [X] Playings & views +1 når man klikke på play 
 - [ ] Efterlys et tegn
 - [ ] Upload et tegn
