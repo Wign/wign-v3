@@ -4,12 +4,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
 
-                    <!-- Logo -->
-                    <div class="flex-shrink-0 flex-grow flex items-center">
-                        <inertia-link :href="route('dashboard')">
-                            <jet-application-mark class="block h-9 w-auto"/>
-                        </inertia-link>
-                    </div>
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex-grow flex items-center">
+                    <inertia-link :href="route('dashboard')">
+                        <jet-application-mark class="block h-9 w-auto"/>
+                    </inertia-link>
+                </div>
                 <div class="flex">
                     <!-- Navigation Links -->
                     <div class="hidden space-x-5 sm:-my-px sm:ml-10 sm:flex">
@@ -28,14 +28,24 @@
                         <jet-nav-link :href="route('about')" :active="route().current('about')">
                             Om Wign
                         </jet-nav-link>
+
+                        <jet-nav-link v-if="!$page.props.user" :href="route('login')"
+                                      :active="route().current('login')">
+                            Login
+                        </jet-nav-link>
+
+                        <NavBtn v-if="!$page.props.user" :href="route('register')"
+                                :active="route().current('register')">
+                            Register dig
+                        </NavBtn>
                     </div>
 
 
-                <div class="hidden sm:flex sm:items-center sm:ml-6">
-                    <!-- Settings Dropdown -->
-                    <div class="ml-3 relative">
-                        <jet-dropdown align="right" width="48">
-                            <template #trigger>
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <!-- Settings Dropdown -->
+                        <div class="ml-3 relative" v-if="$page.props.user">
+                            <jet-dropdown align="right" width="48">
+                                <template #trigger>
                                 <span class="inline-flex rounded-md">
                                             <button type="button"
                                                     class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
@@ -49,30 +59,30 @@
                                                 </svg>
                                             </button>
                                         </span>
-                            </template>
+                                </template>
 
-                            <template #content>
-                                <!-- Account Management -->
-                                <div class="block px-4 py-2 text-xs text-gray-400">
-                                    Brugerprofil
-                                </div>
+                                <template #content>
+                                    <!-- Account Management -->
+                                    <div class="block px-4 py-2 text-xs text-gray-400">
+                                        Brugerprofil
+                                    </div>
 
-                                <jet-dropdown-link :href="route('profile.show')">
-                                    Profil
-                                </jet-dropdown-link>
-
-                                <div class="border-t border-gray-100"></div>
-
-                                <!-- Authentication -->
-                                <form @submit.prevent="logout">
-                                    <jet-dropdown-link as="button">
-                                        Log ud
+                                    <jet-dropdown-link :href="route('profile.show')">
+                                        Profil
                                     </jet-dropdown-link>
-                                </form>
-                            </template>
-                        </jet-dropdown>
+
+                                    <div class="border-t border-gray-100"></div>
+
+                                    <!-- Authentication -->
+                                    <form @submit.prevent="logout">
+                                        <jet-dropdown-link as="button">
+                                            Log ud
+                                        </jet-dropdown-link>
+                                    </form>
+                                </template>
+                            </jet-dropdown>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <!-- Hamburger -->
@@ -115,7 +125,7 @@
                 <div class="flex items-center px-4">
                     <div>
                         <div class="font-medium text-base text-gray-800">{{ name }}</div>
-                        <div class="font-medium text-sm text-gray-500">{{ $page.props.user.email }}</div>
+                        <div class="font-medium text-sm text-gray-500">{{ email }}</div>
                     </div>
                 </div>
 
@@ -138,20 +148,22 @@
 
 <script>
 import JetApplicationMark from '@/Jetstream/ApplicationMark'
-import JetBanner from '@/Jetstream/Banner'
 import JetDropdown from '@/Jetstream/Dropdown'
 import JetDropdownLink from '@/Jetstream/DropdownLink'
 import JetNavLink from '@/Jetstream/NavLink'
 import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink'
-import Header from "./Header";
+import Btn from "@/Components/UI/Btn";
+import NavBtn from "@/Components/NavBtn";
 
 export default {
     components: {
+        NavBtn,
+        Btn,
         JetApplicationMark,
         JetDropdown,
         JetDropdownLink,
         JetNavLink,
-        JetResponsiveNavLink,
+        JetResponsiveNavLink
     },
     data() {
         return {
@@ -164,10 +176,13 @@ export default {
         },
     },
     computed: {
-        name: function() {
+        name: function () {
             let size = 20;
-            let source = this.$page.props.user.name.split(/(\s+)/, 1)[0];
-            return source.length > size ? source.slice(0,size-1).trim().concat('…') : source;
+            let source = this.$page.props.user?.name?.split(/(\s+)/, 1)[0];
+            return source?.length > size ? source.slice(0, size - 1).trim().concat('…') : source;
+        },
+        email: function () {
+            return this.$page.props.user?.email;
         }
     }
 }

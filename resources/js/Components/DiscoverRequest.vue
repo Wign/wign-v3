@@ -9,8 +9,8 @@
         </div>
         <div class="flex flex-wrap">
             <a href="" class="sm:w-2/3 md:w-full xl:w-2/3">
-                <Btn>Se alle efterlyste tegn</Btn>
             </a>
+                <Btn>Se alle efterlyste tegn</Btn>
         </div>
     </div>
 </template>

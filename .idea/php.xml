@@ -230,7 +230,7 @@
   </component>
   <component name="PhpProjectServersManager">
     <servers>
-      <server host="0.0.0.0" id="da77403a-910a-457e-bb20-8ad8aff7ad6c" name="Localhost" use_path_mappings="true">
+      <server host="localhost" id="da77403a-910a-457e-bb20-8ad8aff7ad6c" name="Localhost" use_path_mappings="true">
         <path_mappings>
           <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
         </path_mappings>

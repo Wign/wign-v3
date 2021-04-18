@@ -1,29 +1,16 @@
 <template>
     <div>
-        <SignPlayer :video_uuid=sign.video_uuid :sign_id="sign.id" v-on:played="videoPlayed"/>
-        <div>Playings: {{ playings }}</div>
-        <SignLiker :sign_id="sign.id" :count="sign.likes_count" :liked="sign.liked"/>
+        <h1>{{word.literal}}</h1>
+        <SignComponent v-for="sign in word.signs" :key="sign.id" :sign="sign"></SignComponent>
     </div>
 </template>
 
 <script>
-import SignPlayer from "../Components/SignPlayer";
-import SignLiker from "../Components/SignLiker";
 import AppLayout from "../Layouts/AppLayout";
+import SignComponent from "@/Components/SignComponent";
 
 export default {
-    components: {AppLayout, SignPlayer, SignLiker},
-    props: ['sign'],
-    data: function () {
-        return {
-            playings: this.sign.playings
-        }
-    },
-    methods: {
-        videoPlayed: function (value) {
-            console.log("Emitting played count got! Trying to replace!");
-            this.playings = value;
-        }
-    }
+    components: {SignComponent, AppLayout},
+    props: ['word'],
 }
 </script>

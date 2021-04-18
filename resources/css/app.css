@@ -12,13 +12,9 @@
 }
 
 .btn-turkis {
-    @apply bg-wign-turkis text-gray-100
+    @apply bg-wign-turkis text-gray-100 hover:bg-wign-turkis-600 transition duration-150 ease-in-out
 }
 
 .btn-turkis-outline {
-    @apply border border-wign-turkis text-gray-800 bg-white
-}
-
-.btn-turkis-outline:hover {
-    @apply bg-gray-300
+    @apply border border-wign-turkis text-gray-800 bg-white hover:bg-gray-300 transition duration-150 ease-in-out
 }
