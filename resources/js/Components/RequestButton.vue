@@ -7,7 +7,7 @@ export default {
     props: ['literal'],
     data: function () {
         return {
-            link: '/sign/'+this.literal
+            link: '/create/'+this.literal
         }
     }
 }

@@ -34,7 +34,9 @@
         "@fortawesome/free-regular-svg-icons": "^5.15.3",
         "@fortawesome/free-solid-svg-icons": "^5.15.3",
         "@fortawesome/vue-fontawesome": "^2.0.2",
+        "@inertiajs/progress": "^0.2.4",
         "@trevoreyre/autocomplete-vue": "^2.2.0",
+        "date-fns": "^2.21.1",
         "v-tooltip": "^3.0.0-alpha.21"
     }
 }

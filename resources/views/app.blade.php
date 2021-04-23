@@ -19,7 +19,7 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src='//cameratag.com/v14/js/cameratag.min.js' type='text/javascript'></script>
     </head>
-    <body class="font-sans antialiased bg-summergreen-translucent-5">
+    <body class="antialiased bg-wign-summergreen">
         @inertia
     </body>
 </html>

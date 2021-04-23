@@ -1,10 +1,9 @@
 <template>
     <div class="inline">
-        Likes: {{ likeCounter }}
         <VTooltip class="inline" :disabled="canLike">
-            <button class="border p-1" v-on:click="toggleLike">
-                {{ isLiked ? "Already liked!" : "Not liked yet!" }}
-            </button>
+            <button class="p-1" :class="{'cursor-not-allowed': !canLike}" v-on:click="toggleLike">
+                <font-awesome-icon :icon="likeIcon" :style="{ color: likeColor }"></font-awesome-icon>
+            </button> {{ likeCounter }}
             <template #popper>Du skal være logget ind for at like et tegn</template>
         </VTooltip>
     </div>
@@ -40,6 +39,12 @@ export default {
     computed: {
         canLike: function () {
             return !!this.$page.props.user;
+        },
+        likeIcon: function () {
+            return this.isLiked ? ['fas', 'thumbs-up'] : ['far', 'thumbs-up'];
+        },
+        likeColor: function () {
+            return this.isLiked ? '#4d9999' : 'black';
         }
     }
 }

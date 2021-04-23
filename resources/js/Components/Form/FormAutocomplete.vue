@@ -20,9 +20,8 @@ export default {
     methods: {
         search(input) {
             if (input.length >= 3) {
-                const url = `/search/${encodeURI(input)}`
+                const url = '/search/' + encodeURI(input);
                 return axios.get(url).then(r => {
-                    console.log(r);
                         return r.data;
                     }
                 );
@@ -34,7 +33,7 @@ export default {
             return result.literal;
         },
         handleSubmit(result) {
-            var url = '/sign/'+encodeURI(result.literal);
+            var url = '/sign/' + encodeURI(result.literal);
             this.$inertia.visit(url);
         }
     }

@@ -165,6 +165,12 @@ export default {
         JetNavLink,
         JetResponsiveNavLink
     },
+    props: {
+        search: {
+            type: Boolean,
+            default: true,
+        },
+    },
     data() {
         return {
             showingNavigationDropdown: false,

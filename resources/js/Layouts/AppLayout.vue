@@ -1,7 +1,7 @@
 <template>
-    <div class="min-h-screen bg-gray-100 flex flex-col">
+    <div class="min-h-screen flex flex-col">
         <JetBanner />
-        <Header />
+        <Header :search="headerSearch" />
 
         <!-- Page Content -->
         <main class="flex-grow" :style="backgroundStyle">
@@ -21,7 +21,7 @@ import Footer from "./Footer";
 import JetBanner from "../Jetstream/Banner"
 
 export default {
-    props: ['background'],
+    props: ['background', 'headerSearch'],
     components: {
         JetBanner,
         Header,

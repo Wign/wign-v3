@@ -20,6 +20,7 @@ module.exports = {
                 'wign-green-700': '#4d997a',
                 'wign-turkis': '#5CC5C5',
                 'wign-turkis-600': '#4d9999',
+                'wign-summergreen': '#F8F9FA',
                 'translucent-80': 'rgba(255,255,255,0.80)',
                 'translucent-60': 'rgba(255,255,255,0.60)',
                 'translucent-25': 'rgba(255,255,255,0.25)',

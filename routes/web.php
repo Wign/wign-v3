@@ -36,10 +36,12 @@ Route::get('/about', [AboutController::class, 'show'])->name('about');
 Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 
 Route::get('/words', [WordController::class, 'show'])->name('words');
-Route::get('/sign/{word}', [SignController::class, 'show'])->name('sign');
+Route::get('/sign/{literal}', [SignController::class, 'show'])->name('sign');
 Route::get('/randomSign', [SignController::class, 'random'])->name('randomSign');
 Route::get('/randomRequests/{num?}', [RequestController::class, 'randomRequests'])->name('randomRequests');
 Route::get('/search/{word}', [WordController::class, 'search']);
+Route::get('/create/{literal?}', [SignController::class, 'create'])->name('create');
+Route::get('/report/{signId}', [SignController::class, 'showReport'])->name('report');
 
 Route::post('/played', [ViewsController::class, 'increment']);
 Route::post('/liked', [LikeController::class, 'toggleLike']);
