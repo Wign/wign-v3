@@ -23,11 +23,18 @@ Redesigned by André Jensen
 - [ ] Design overføre fra v2
     - [X] Logo
     - [X] Header
-    - [ ] Søgefelt
-    - [ ] Seneste tegn
-    - [ ] Efterlyste tegn
-    - [ ] Tegn-siden
+    - [X] Søgefelt forside
+    - [X] Seneste tegn
+    - [X] Efterlyste tegn
+    - [X] Tegn-siden
         - [X] Like og unlike
-        - [X] Playings & views +1 når man klikke på play 
+        - [X] Playings & views +1 når man klikke på play
+        - [ ] Flere videoer per side
+        - [ ] Call To Action knap til sidst
 - [ ] Efterlys et tegn
 - [ ] Upload et tegn
+- [ ] Rapportér et tegn
+- [ ] Kontakt os siden
+- [ ] Privatlivspolitik samt Servicevilkår
+  - [ ] Byg ind i vores rammeværk
+  - [ ] Tekst gennemse
